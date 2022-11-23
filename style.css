@@ -328,64 +328,78 @@ button{
 
 #nav-menu[data-pressed="on"] > #nav-menu-svg >
 #name-box{
+  transform: translateZ(0);
   animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
 }
 #nav-menu[data-pressed="on"] > #nav-menu-svg >
 #name-box-glow{
+  transform: translateZ(0);
   animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
 }
 #nav-menu[data-pressed="on"] > #nav-menu-svg >
 #rihsuri{
+  transform: translateZ(0);
   animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
 }
 #nav-menu[data-pressed="on"] > #nav-menu-svg >
 #rihsuri-glow{
+  transform: translateZ(0);
   animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
 }
 
 #nav-menu[data-pressed="on"] > #nav-menu-svg >
 #tri-body{
+  transform: translateZ(0);
   transform-origin: center;
   animation: spin var(--animation-speed) ease-in-out 0s forwards;
 }
 
 #nav-menu[data-pressed="on"] > #nav-menu-svg >
 #tri-glow{
+  transform: translateZ(0);
   transform-origin: center;
   animation: spin var(--animation-speed) ease-in-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] > 
 #nav-menu-svg{
+  transform: translateZ(0);
   animation: svgShadow 5s ease-in-out infinite;
 }
 
 /* animate-reverse */
 #nav-menu[data-pressed="off"]{ 
+  transform: translateZ(0);
   animation: toMoveBack var(--animation-speed-slow) cubic-bezier(.2,.41,0,1.47) 0s forwards;
 }
 #nav-menu[data-pressed="off"] > #nav-menu-svg >
 #name-box {
+  transform: translateZ(0);
   animation: toBorder var(--animation-speed) ease-in-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] > #nav-menu-svg >
 #name-box-glow {
+  transform: translateZ(0);
   animation: toBorder var(--animation-speed) ease-in-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] > #nav-menu-svg >
 #rihsuri {
+  transform: translateZ(0);
   animation: toBorder var(--animation-speed) ease-in-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] > #nav-menu-svg >
 #rihsuri-glow{
+  transform: translateZ(0);
   animation: toBorder var(--animation-speed) ease-in-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] >#nav-menu-svg >
 #tri-body{
+  transform: translateZ(0);
   transform-origin: center;
   animation: backSpin var(--animation-speed) ease-in-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] >#nav-menu-svg >
 #tri-glow{
+  transform: translateZ(0);
   transform-origin: center;
   animation: backSpin var(--animation-speed) ease-in-out 0s forwards;
 }
