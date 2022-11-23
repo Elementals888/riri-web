@@ -361,7 +361,7 @@ button{
 
 /* animate-reverse */
 #nav-menu[data-pressed="off"]{ 
-  animation: toMoveBack var(--animation-speed-slow) cubic-bezier(.11,1.19,0.8,1.01) 0s forwards;
+  animation: toMoveBack var(--animation-speed-slow) cubic-bezier(.2,.41,0,1.47) 0s forwards;
 }
 #nav-menu[data-pressed="off"] > #nav-menu-svg >
 #name-box {
