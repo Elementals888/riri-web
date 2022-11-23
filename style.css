@@ -29,6 +29,7 @@
   --clr-base-200: #595c72;
   --clr-base-100: #303236;
   --clr-accent-200:#54cbed;
+  --clr-accent-250:#00cff83b;
   --clr-accent-100:#72a8d4;
 
   /*font-sizes*/
@@ -315,6 +316,12 @@ button{
 /* ----------------- */
 
 /* animate */
+
+/* an abomination I love it tho */
+/* #nav-menu-svg {
+  animation: breath 2s linear infinite;
+} */
+
 #nav-menu[data-pressed="on"]{ 
   animation: toMove var(--animation-speed) cubic-bezier(.2,.41,0,1.47) 0s forwards;
 }
@@ -347,6 +354,11 @@ button{
   transform-origin: center;
   animation: spin var(--animation-speed) ease-in-out 0s forwards;
 }
+#nav-menu[data-pressed="off"] > 
+#nav-menu-svg{
+  animation: svgShadow 5s ease-in-out infinite;
+}
+
 /* animate-reverse */
 #nav-menu[data-pressed="off"]{ 
   animation: toMoveBack var(--animation-speed-slow) cubic-bezier(.11,1.19,0.8,1.01) 0s forwards;
@@ -439,6 +451,29 @@ button{
 
   }
 }
+
+@keyframes svgShadow {
+  0%{filter: drop-shadow(0rem 0rem 0rem rgb(0,0,0,0));
+  }
+  50% {filter: drop-shadow(0.2rem 0.2rem 0.5rem var(--clr-accent-250));
+  }
+  100%{filter: drop-shadow(0rem 0rem 0rem rgb(0,0,0,0));
+  }
+}
+
+/* this is too cursed to look at */
+/* @keyframes breath {
+  0% {scale: 1;}
+  33% {scale: 1.05;}
+  66% {scale: 0.95;}
+  100% {scale: 1;}
+} */
+
+/* ----------------- */
+/*    media queries  */
+/* ----------------- */
+
+
 
 /* ----------------- */
 /*     debugger      */
