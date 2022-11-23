@@ -1,0 +1,448 @@
+/* developed by EcXscariot/yourOrdinaryCarrot */
+/* last modified 11/23/2022 */
+
+/* css reset by EcXscariot/yourOrdinaryCarrot */
+/* last modified 11/20/2022 */
+
+/* addapted from:  */
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* ----------------- */
+/*     Imported      */
+/* ----------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+/* ----------------- */
+/* Custom properties */
+/* ----------------- */
+
+:root {
+
+  /*color*/
+  --clr-base-900: #f8f9fc;
+  --clr-base-800: #e1e3ec;
+  --clr-base-700: #b9b4bd;
+  --clr-base-600: #cccad4;
+  --clr-base-500: #9f9cac;
+  --clr-base-300: #70738f;
+  --clr-base-200: #595c72;
+  --clr-base-100: #303236;
+  --clr-accent-200:#54cbed;
+  --clr-accent-100:#72a8d4;
+
+  /*font-sizes*/
+
+  --fs-XL: 3rem;
+  --fs-L: 2.256rem;
+  --fs-M: 1.5rem;
+  --fs-S: 1rem;
+  --fs-XS: 0.625rem;
+  
+  /*font-fams*/
+  --ff-head: 'Gruppo', monospace;
+  --ff-main: 'Gruppo', monospace;
+  --ff-sub: 'Gruppo', monospace;
+
+  /* font-weight */
+  --fw-black: 900; /*thicc*/
+  --fw-bold: 700;
+  --fw-big: 500;
+  --fw-base: 400;
+  --fw-small: 200;
+  --fw-thin: 100;
+
+
+  /* other root sizes */
+  --animation-speed: 0.7s
+}
+
+/* ----------------- */
+/* Reset */
+/* ----------------- */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--ff-main);
+  font-weight: var(--fw-base);
+
+  /* ^^ toggle depending on website layout ^^ */
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/*change default link on click text color*/
+a:active {
+  color: var(--clr-base-000);
+}
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Resets button decorations*/
+button{
+  padding: 0;
+  outline: none;
+  border-style: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ----------------- */
+/*utility classes*/
+/* ----------------- */
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+.justify-center{
+  justify-content: center;
+}
+.align-center{
+  align-items: center;
+}
+.center{
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  translate: -50% -50%;  
+}
+
+/* ----------------- */
+/*General use classes*/
+/* ----------------- */
+
+/* fonts */
+.font-title{
+  font-size: var(--fs-XL);
+  font-family: var(--ff-head);
+  font-weight: var(--fw-big);
+}
+.font-subtitle{
+  font-size: var(--fs-L);
+  font-family: var(--ff-head);
+  font-family: var(--fw-big);
+}
+.font-body{
+  font-size: var(--fs-M);
+  font-family: var(--ff-main);
+  font-family: var(--fw-base);
+}
+.font-subtext{
+  font-size: var(--fs-S);
+  font-family: var(--ff-sub);
+  font-weight: var(--fw-small);
+}
+.font-hidden{
+  font-size: var(--fs-XS);
+  font-family: var(--ff-sub);
+  font-weight: var(--fw-small);
+} 
+
+/* backgrounds */
+.bg-board{
+  background-color: var(--clr-base-100);
+}
+.bg-container-weak{
+  background-color: var(--clr-base-200);
+}
+.bg-container-strong{
+  background-color: var(--clr-base-900);
+}
+.bg-accent-weak{
+  background-color: var(--clr-accent-100);
+}
+.bg-accent-strong{
+  background-color: var(--clr-accent-200);
+}
+
+/* color styling */
+.clr-light{
+  color: var(--clr-base-9000);
+}
+.clr-accent{
+  color: var(--clr-accent-200);
+}
+
+/* element styling */
+.btn-standard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 3rem;
+  width: 100%;
+  margin-inline: 4.5rem;
+  border-radius: 0.256rem;
+
+
+  background-color: rgb(0, 0, 0, 0.1);
+  color: var(--clr-base-900);
+  
+}
+
+.link-standard{
+  display: flex;
+  width: inherit;
+  justify-content: center;
+}
+.link-standard:hover{
+  opacity: 90%;
+}
+.link-standard:hover > .btn-standard{
+  text-shadow: 0 0 0.5rem var(--clr-base-900);
+}
+
+
+/* ----------------- */
+/*Custom styles*/
+/* ----------------- */
+.wrapper{
+  flex-direction: column;
+  position: relative;
+  background-color: rgb(0, 0, 0, 0);
+}
+
+#nav-menu{
+  z-index: 900;
+  max-width: 20rem;
+  min-width: 5rem;
+  aspect-ratio: 1;
+  margin-inline: 4.5rem;
+  background-color: rgb(0, 0, 0, 0);
+
+}
+.nav-buttons{
+  z-index: 500;
+  position: absolute;
+
+  flex-direction: column;
+  gap: 0.625rem;
+  width: 100%;
+
+  opacity: 0;
+
+}
+
+/* ----------------- */
+/*     Svg styles    */
+/* ----------------- */
+#nav-menu-svg{
+  width: 100%;
+  height: 100%;
+}
+#logo-bg{
+  fill: var(--clr-base-200);
+}
+#name-box{
+  fill: var(--clr-base-200);
+}
+#name-box-glow{
+  fill: var(--clr-base-900);
+}
+#rihsuri,
+#rihsuri-glow{
+  fill: var(--clr-base-900);
+}
+#tri-body,
+#tri-glow{
+  stroke: var(--clr-base-900);
+}
+
+/* ----------------- */
+/*     animations    */
+/* ----------------- */
+
+/* animate */
+#nav-menu[data-pressed="on"]{ 
+  animation: toMove var(--animation-speed) cubic-bezier(.2,.41,0,1.47) 0s forwards;
+}
+
+#nav-menu[data-pressed="on"] > #nav-menu-svg >
+#name-box{
+  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
+}
+#nav-menu[data-pressed="on"] > #nav-menu-svg >
+#name-box-glow{
+  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
+}
+#nav-menu[data-pressed="on"] > #nav-menu-svg >
+#rihsuri{
+  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
+}
+#nav-menu[data-pressed="on"] > #nav-menu-svg >
+#rihsuri-glow{
+  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
+}
+
+#nav-menu[data-pressed="on"] > #nav-menu-svg >
+#tri-body{
+  transform-origin: center;
+  animation: spin var(--animation-speed) ease-in-out 0s forwards;
+}
+
+#nav-menu[data-pressed="on"] > #nav-menu-svg >
+#tri-glow{
+  transform-origin: center;
+  animation: spin var(--animation-speed) ease-in-out 0s forwards;
+}
+/* animate-reverse */
+#nav-menu[data-pressed="off"]{ 
+  animation: toMoveBack var(--animation-speed) cubic-bezier(.68,-0.64,.33,1.94) 0s forwards;
+}
+#nav-menu[data-pressed="off"] > #nav-menu-svg >
+#name-box {
+  animation: toBorder var(--animation-speed) ease-in-out 0s forwards;
+}
+#nav-menu[data-pressed="off"] > #nav-menu-svg >
+#name-box-glow {
+  animation: toBorder var(--animation-speed) ease-in-out 0s forwards;
+}
+#nav-menu[data-pressed="off"] > #nav-menu-svg >
+#rihsuri {
+  animation: toBorder var(--animation-speed) ease-in-out 0s forwards;
+}
+#nav-menu[data-pressed="off"] > #nav-menu-svg >
+#rihsuri-glow{
+  animation: toBorder var(--animation-speed) ease-in-out 0s forwards;
+}
+#nav-menu[data-pressed="off"] >#nav-menu-svg >
+#tri-body{
+  transform-origin: center;
+  animation: backSpin var(--animation-speed) ease-in-out 0s forwards;
+}
+#nav-menu[data-pressed="off"] >#nav-menu-svg >
+#tri-glow{
+  transform-origin: center;
+  animation: backSpin var(--animation-speed) ease-in-out 0s forwards;
+}
+
+/* move */
+@keyframes toMove {
+  from{transform: translateY(0px);}
+  to{transform: translateY(-50%);}
+}
+@keyframes spin {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(240deg);}
+}
+@keyframes toCenter {
+  from{transform: translate(0%);}
+  to{transform: translate(-18%, -2%);}
+}
+/* move back */
+@keyframes toMoveBack {
+  from{transform: translateY(-50%);}
+  to{transform: translateY(0%);}
+}
+@keyframes backSpin {
+  from{transform: rotate(240deg);}
+  to{transform: rotate(0%);}
+}
+@keyframes toBorder {
+  from{transform: translate(-18%, -2%);}
+  to{transform: translate(0%);}
+}
+
+#button-animation[data-pressed="on"]{
+  animation: buttonMove 1s cubic-bezier(0,1.13,.54,1.15) 0s forwards;
+}
+
+#button-animation[data-pressed="off"]{
+  animation: buttonMoveBack 1s cubic-bezier(.76,-0.64,.01,.99) 0s forwards;
+}
+
+@keyframes buttonMove {
+  from{
+    transform: translateY(0%);
+    scale: 20%;
+    opacity: 0;
+  }
+  to{
+    transform: translateY(55%);
+    scale: 100%;
+    opacity: 100%;
+  }
+}
+
+@keyframes buttonMoveBack {
+  from{
+    transform: translateY(55%);
+    scale: 100%;
+    opacity: 100%;
+  }
+  to{
+    transform: translateY(0%);
+    scale: 20%;
+    opacity: 0;
+
+  }
+}
+
+/* ----------------- */
+/*     debugger      */
+/* ----------------- */
+
+
+ /* *{outline: 0.0625rem solid black;} */
+
