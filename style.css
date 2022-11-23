@@ -376,34 +376,34 @@ button{
 #nav-menu[data-pressed="off"] > #nav-menu-svg >
 #name-box {
   transform: translateZ(0);
-  animation: toBorder var(--animation-speed) ease-out 0s forwards;
+  animation: toBorder var(--animation-speed-fast) ease-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] > #nav-menu-svg >
 #name-box-glow {
   transform: translateZ(0);
-  animation: toBorder var(--animation-speed) ease-out 0s forwards;
+  animation: toBorder var(--animation-speed-fast) ease-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] > #nav-menu-svg >
 #rihsuri {
   transform: translateZ(0);
-  animation: toBorder var(--animation-speed) ease-out 0s forwards;
+  animation: toBorder var(--animation-speed-fast) ease-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] > #nav-menu-svg >
 #rihsuri-glow{
   transform: translateZ(0);
-  animation: toBorder var(--animation-speed) ease-out 0s forwards;
+  animation: toBorder var(--animation-speed-fast) ease-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] >#nav-menu-svg >
 #tri-body{
   transform: translateZ(0);
   transform-origin: center;
-  animation: backSpin var(--animation-speed) ease-out 0s forwards;
+  animation: backSpin var(--animation-speed-fast) ease-out 0s forwards;
 }
 #nav-menu[data-pressed="off"] >#nav-menu-svg >
 #tri-glow{
   transform: translateZ(0);
   transform-origin: center;
-  animation: backSpin var(--animation-speed) ease-out 0s forwards;
+  animation: backSpin var(--animation-speed-fast) ease-out 0s forwards;
 }
 
 /* move */
