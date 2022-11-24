@@ -27,8 +27,8 @@
   --clr-base-600: #cccad4;
   --clr-base-500: #9f9cac;
   --clr-base-300: #70738f;
-  --clr-base-200: #595c72;
-  --clr-base-100: #121212;
+  --clr-base-100: #040000;
+  --clr-base-200: #0f0f0f;
   --clr-accent-200:#54cbed;
   --clr-accent-250:#00cff83b;
   --clr-accent-100:#72a8d4;
@@ -393,7 +393,7 @@ button{
 
 #nav-menu-svg{
   transform: translateZ(0);
-  animation: svgShadow 5s ease-in-out infinite;
+  animation: svgShadow 4.5s ease-in-out infinite;
 }
 /* animate-reverse */
 #nav-menu[data-pressed="off"]{ 
