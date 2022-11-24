@@ -22,12 +22,13 @@
   /*color*/
   --clr-base-900: #f8f9fc;
   --clr-base-800: #e1e3ec;
+  --clr-base-850: #e1e3ec2c;
   --clr-base-700: #b9b4bd;
   --clr-base-600: #cccad4;
   --clr-base-500: #9f9cac;
   --clr-base-300: #70738f;
   --clr-base-200: #595c72;
-  --clr-base-100: #303236;
+  --clr-base-100: #1e1e1e;
   --clr-accent-200:#54cbed;
   --clr-accent-250:#00cff83b;
   --clr-accent-100:#72a8d4;
@@ -240,7 +241,7 @@ button{
   border-radius: 0.256rem;
 
 
-  background-color: rgb(0, 0, 0, 0.1);
+  background-color: var(--clr-base-850);
   color: var(--clr-base-900);
 
   cursor: pointer;
@@ -297,19 +298,19 @@ button{
 
 #nav-btn-1:hover{
   color:#6441a5;
-  text-shadow: 0 0 0.5rem #6441a5;
+  text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
 #nav-btn-2:hover{
-  text-shadow: 0 0 0.5rem var(--clr-base-900);
+  text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
 #nav-btn-3:hover{
-  text-shadow: 0 0 0.5rem var(--clr-base-900);
+  text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
 #nav-btn-4:hover{
-  text-shadow: 0 0 0.5rem var(--clr-base-900);
+  text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
 #nav-btn-5:hover{
-  text-shadow: 0 0 0.5rem var(--clr-base-900);
+  text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
 #nav-btn-5::before{
   content: "Terms of service";
