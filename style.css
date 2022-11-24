@@ -27,9 +27,8 @@
   --clr-base-600: #cccad4;
   --clr-base-500: #9f9cac;
   --clr-base-300: #70738f;
-  --clr-base-200: #595c72;
-  --clr-base-250: #110e12;
-  --clr-base-100: #1e1e1e;
+  --clr-base-100: #040000;
+  --clr-base-200: #0f0f0f;
   --clr-accent-200:#54cbed;
   --clr-accent-250:#00cff83b;
   --clr-accent-100:#72a8d4;
@@ -208,7 +207,7 @@ button{
 
 /* backgrounds */
 .bg-board{
-  background-color: var(--clr-base-250);
+  background-color: var(--clr-base-100);
 }
 .bg-container-weak{
   background-color: var(--clr-base-200);
@@ -325,10 +324,10 @@ button{
   height: 100%;
 }
 #logo-bg{
-  fill: var(--clr-base-100);
+  fill: var(--clr-base-200);
 }
 #name-box{
-  fill: var(--clr-base-100);
+  fill: var(--clr-base-200);
 }
 #name-box-glow{
   fill: var(--clr-base-900);
@@ -394,7 +393,7 @@ button{
 
 #nav-menu-svg{
   transform: translateZ(0);
-  animation: svgShadow 5s ease-in-out infinite;
+  animation: svgShadow 4.5s ease-in-out infinite;
 }
 /* animate-reverse */
 #nav-menu[data-pressed="off"]{ 
@@ -507,7 +506,7 @@ button{
 @keyframes svgShadow {
   0%{filter: drop-shadow(0rem 0rem 0rem rgb(0,0,0,0));
   }
-  50% {filter: drop-shadow(0.2rem 0.1rem 0.7rem var(--clr-base-800));
+  50% {filter: drop-shadow(0.2rem 0.2rem 0.5rem var(--clr-base-900));
   }
   100%{filter: drop-shadow(0rem 0rem 0rem rgb(0,0,0,0));
   }
