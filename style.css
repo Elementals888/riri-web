@@ -92,6 +92,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  overflow: hidden;
   min-height: 100vh;
   min-width: 100vw;
   text-rendering: optimizeSpeed;
@@ -236,26 +237,27 @@ button{
 
   height: 3rem;
   width: 100%;
-  margin-inline: 4.5rem;
   border-radius: 0.256rem;
 
 
   background-color: rgb(0, 0, 0, 0.1);
   color: var(--clr-base-900);
+
+  cursor: pointer;
   
 }
 
 .link-standard{
   display: flex;
-  width: inherit;
-  justify-content: center;
+  width: 70%;
+  pointer-events: none;
+  cursor: default;
 }
 .link-standard:hover{
-  opacity: 90%;
+  opacity: 80%;
 }
-.link-standard:hover > .btn-standard{
-  text-shadow: 0 0 0.5rem var(--clr-base-900);
-}
+
+
 
 
 /* ----------------- */
@@ -274,7 +276,7 @@ button{
   aspect-ratio: 1;
   margin-inline: 4.5rem;
   background-color: rgb(0, 0, 0, 0);
-
+  cursor: pointer;
 }
 .nav-buttons{
   z-index: 500;
@@ -284,8 +286,33 @@ button{
   gap: 0.625rem;
   width: 100%;
 
+  
+
   opacity: 0;
 
+}
+#button-animation[data-pressed="on"]> .link-standard{
+  pointer-events: all;
+}
+
+#nav-btn-1:hover{
+  color:#6441a5;
+  text-shadow: 0 0 0.5rem #6441a5;
+}
+#nav-btn-2:hover{
+  text-shadow: 0 0 0.5rem var(--clr-base-900);
+}
+#nav-btn-3:hover{
+  text-shadow: 0 0 0.5rem var(--clr-base-900);
+}
+#nav-btn-4:hover{
+  text-shadow: 0 0 0.5rem var(--clr-base-900);
+}
+#nav-btn-5:hover{
+  text-shadow: 0 0 0.5rem var(--clr-base-900);
+}
+#nav-btn-5::before{
+  content: "Terms of service";
 }
 
 /* ----------------- */
@@ -362,12 +389,11 @@ button{
   transform-origin: center;
   animation: spin var(--animation-speed) ease-in-out 0s forwards;
 }
-#nav-menu[data-pressed="off"] > 
+
 #nav-menu-svg{
   transform: translateZ(0);
   animation: svgShadow 5s ease-in-out infinite;
 }
-
 /* animate-reverse */
 #nav-menu[data-pressed="off"]{ 
   transform: translateZ(0);
@@ -404,6 +430,12 @@ button{
   transform: translateZ(0);
   transform-origin: center;
   animation: backSpin var(--animation-speed-fast) ease-out 0s forwards;
+}
+
+#nav-menu[data-pressed="on"] > 
+#nav-menu-svg{
+  transform: translateZ(0);
+  animation: none;
 }
 
 /* move */
@@ -479,6 +511,16 @@ button{
   }
 }
 
+#particles-js{
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: drop-shadow(0.2rem 0.2rem 10px var(--clr-accent-250));
+}
+
 /* this is too cursed to look at */
 /* @keyframes breath {
   0% {scale: 1;}
@@ -491,7 +533,120 @@ button{
 /*    media queries  */
 /* ----------------- */
 
+@media (min-width: 62.5rem) {
+  .nav-buttons{
+    opacity: 100;
+  }
 
+
+  @keyframes toMove {
+    from{transform: translateX(0px);}
+    to{transform: translateX(-55%);}
+  }
+  @keyframes toMoveBack {
+    from{transform: translateX(-55%);}
+    to{transform: translateX(0%);}
+  }
+  @keyframes buttonMove {
+    from{
+      transform: translateX(-100%);
+      scale: 20%;
+      opacity: 0;
+    }
+    to{
+      scale: 100%;
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes buttonMoveBack {
+    0%{
+      scale: 1;
+    }
+    65%{
+      transform: translateX(-100%);
+      scale: 0.1;
+    }
+  }
+  #button-animation{
+    animation: none !important;
+  }
+  #button-animation[data-pressed="on"]> a >
+  #nav-btn-5{
+    transform: translateX(50%);
+    animation: buttonMove 1000ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    display: block;
+  }
+  #button-animation[data-pressed="on"]> a >
+  #nav-btn-4{
+    transform: translateX(40%);
+    animation: buttonMove 800ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    display: block;
+  }
+  #button-animation[data-pressed="on"]> a >
+  #nav-btn-3{
+    transform: translateX(30%);
+    animation: buttonMove 600ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    display: block;
+  }
+  #button-animation[data-pressed="on"]> a >
+  #nav-btn-2{
+    transform: translateX(20%);
+    animation: buttonMove 400ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    display: block;
+  }
+  #button-animation[data-pressed="on"]> a >
+  #nav-btn-1{
+    transform: translateX(10%);
+    animation: buttonMove 200ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    display: block;
+  }
+
+  /* close */
+  #button-animation[data-pressed="off"]> a >
+  #nav-btn-5{
+    animation: buttonMoveBack 1100ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    scale: 0.1;
+  }
+  #button-animation[data-pressed="off"]> a >
+  #nav-btn-4{
+    animation: buttonMoveBack 1000ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    scale: 0.1;
+  }
+  #button-animation[data-pressed="off"]> a >
+  #nav-btn-3{
+    animation: buttonMoveBack 800ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    scale: 0.1;
+  }
+  #button-animation[data-pressed="off"]> a >
+  #nav-btn-2{
+    animation: buttonMoveBack 600ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    scale: 0.1;
+  }
+  #button-animation[data-pressed="off"]> a >
+  #nav-btn-1{
+    animation: buttonMoveBack 400ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    scale: 0.1;
+  }
+  
+
+  #nav-btn-1{
+  scale: 0.1;}
+  #nav-btn-2{
+  scale: 0.1;}
+  #nav-btn-3{
+  scale: 0.1;}
+  #nav-btn-4{
+  scale: 0.1;}
+  #nav-btn-5{
+  scale: 0.1;}
+}
+
+@media (max-width: 500px) {
+  #nav-btn-5::before{
+    content: "Terms";
+  }
+}
 
 /* ----------------- */
 /*     debugger      */

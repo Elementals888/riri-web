@@ -13,12 +13,15 @@ last modified 11/23/2022
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
+    <script src="node_modules/particles.js/particles.js" defer></script>
+    <script src="custom.js" defer></script>
     <script src="main.js" defer></script>
     <title>Riri-website-main-menu</title>
 </head>
 <body class="flex align-center justify-center bg-board">
+    <div id="particles-js"></div>
     <div class="wrapper bg-board flex justify-center align-center">
-    <button id="nav-menu" data-pressed="off">
+    <button id="nav-menu">
         <svg id="nav-menu-svg" width="730" height="730" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle id="logo-bg" cx="365" cy="365" r="365"/>
             <g id="tri-glow" filter="url(#filter0_f_0_1)">
@@ -53,11 +56,11 @@ last modified 11/23/2022
             </svg>
         </button>
         <section id="button-animation" class="nav-buttons flex align-center">
-            <a class="link-standard" href=""><button class="btn-standard font-subtitle">Tos</button></a>
-            <a class="link-standard"  href=""><button class="btn-standard font-subtitle">samples</button></a>
-            <a class="link-standard"  href=""><button class="btn-standard font-subtitle">socials</button></a>
-            <a class="link-standard"  href=""><button class="btn-standard font-subtitle">twitch</button></a>
-            <a class="link-standard"  href=""><button class="btn-standard font-subtitle">comissions</button></a>
+            <a class="link-standard" href="https://www.twitch.tv/rihsuri"><button id="nav-btn-1" class="btn-standard font-subtitle">Twitch</button></a>
+            <a class="link-standard"  href="samples.html"><button id="nav-btn-2" class="btn-standard font-subtitle">Samples</button></a>
+            <a class="link-standard"  href="socials.html"><button id="nav-btn-3" class="btn-standard font-subtitle">Socials</button></a>
+            <a class="link-standard"  href="comissions.html"><button id="nav-btn-4" class="btn-standard font-subtitle">Comissions</button></a>
+            <a class="link-standard"  href="terms.html"><button id="nav-btn-5" class="btn-standard font-subtitle"></button></a>
            
         </section>
 </div>

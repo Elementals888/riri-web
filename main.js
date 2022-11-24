@@ -7,17 +7,7 @@ const navButtons = document.querySelector('.nav-buttons');
 
 function main() {
     navBtn();
-    // resetAnimation();    
 }
-
-// function resetAnimation() {
-//     navMenu.addEventListener('animationend', () => { 
-//         let timer = setTimeout(animateBack, 60000);
-//         if (navMenu.getAttribute('data-pressed') == 'off') {
-//             clearTimeout(timer);
-//         }
-//     });
-// }
 
 
 function navBtn() {
