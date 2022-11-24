@@ -506,7 +506,7 @@ button{
 @keyframes svgShadow {
   0%{filter: drop-shadow(0rem 0rem 0rem rgb(0,0,0,0));
   }
-  50% {filter: drop-shadow(0.2rem 0.2rem 0.5rem var(--clr-accent-250));
+  50% {filter: drop-shadow(0.2rem 0.1rem 0.7rem var(--clr-base-800));
   }
   100%{filter: drop-shadow(0rem 0rem 0rem rgb(0,0,0,0));
   }
