@@ -2,7 +2,7 @@ if (window.innerWidth > 1080) {
     particlesJS("particles-js", {
         "particles": {
           "number": {
-            "value": 6,
+            "value": 12,
             "density": {
               "enable": true,
               "value_area": 800

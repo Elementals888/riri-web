@@ -564,7 +564,7 @@ button{
     0%{
       scale: 1;
     }
-    65%{
+    60%{
       transform: translateX(-100%);
       scale: 0.1;
     }
