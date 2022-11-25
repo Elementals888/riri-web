@@ -5,7 +5,7 @@ const navMenu = document.getElementById('nav-menu');
 const navButtons = document.querySelector('.nav-buttons');
 
 
-function main() {
+function index() {
     navBtn();
 }
 
@@ -20,15 +20,15 @@ function navBtn() {
             animateBack();
         }
         navMenu.disabled = true;
-        let buttonTimer = setTimeout(()=> {
+        let buttonTimer = setTimeout(() => {
             navMenu.disabled = false;
         }, 700)
     });
 }
 
-function animateBack(){
+function animateBack() {
     navMenu.setAttribute('data-pressed', 'off');
     navButtons.setAttribute('data-pressed', 'off');
 }
 
-main();
+index();
