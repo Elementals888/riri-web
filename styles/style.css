@@ -29,9 +29,9 @@
   --clr-base-300: #70738f;
   --clr-base-100: #040000;
   --clr-base-200: #0f0f0f;
-  --clr-accent-200:#54cbed;
-  --clr-accent-250:#00cff83b;
-  --clr-accent-100:#72a8d4;
+  --clr-accent-200: #54cbed;
+  --clr-accent-250: #00cff83b;
+  --clr-accent-100: #72a8d4;
 
   /*font-sizes*/
 
@@ -40,14 +40,15 @@
   --fs-M: 1.5rem;
   --fs-S: 1rem;
   --fs-XS: 0.625rem;
-  
+
   /*font-fams*/
   --ff-head: 'Gruppo', monospace;
   --ff-main: 'Gruppo', monospace;
   --ff-sub: 'Gruppo', monospace;
 
   /* font-weight */
-  --fw-black: 900; /*thicc*/
+  --fw-black: 900;
+  /*thicc*/
   --fw-bold: 700;
   --fw-big: 500;
   --fw-base: 400;
@@ -113,6 +114,7 @@ a:not([class]) {
 a:active {
   color: var(--clr-base-000);
 }
+
 /* Make images easier to work with */
 img,
 picture {
@@ -127,8 +129,9 @@ textarea,
 select {
   font: inherit;
 }
+
 /* Resets button decorations*/
-button{
+button {
   padding: 0;
   outline: none;
   border-style: none;
@@ -161,17 +164,20 @@ button{
 .grid {
   display: grid;
 }
-.justify-center{
+
+.justify-center {
   justify-content: center;
 }
-.align-center{
+
+.align-center {
   align-items: center;
 }
-.center{
+
+.center {
   position: absolute;
   top: 50%;
   right: 50%;
-  translate: -50% -50%;  
+  translate: -50% -50%;
 }
 
 /* ----------------- */
@@ -179,59 +185,68 @@ button{
 /* ----------------- */
 
 /* fonts */
-.font-title{
+.font-title {
   font-size: var(--fs-XL);
   font-family: var(--ff-head);
   font-weight: var(--fw-big);
 }
-.font-subtitle{
+
+.font-subtitle {
   font-size: var(--fs-L);
   font-family: var(--ff-head);
   font-family: var(--fw-big);
 }
-.font-body{
+
+.font-body {
   font-size: var(--fs-M);
   font-family: var(--ff-main);
   font-family: var(--fw-base);
 }
-.font-subtext{
+
+.font-subtext {
   font-size: var(--fs-S);
   font-family: var(--ff-sub);
   font-weight: var(--fw-small);
 }
-.font-hidden{
+
+.font-hidden {
   font-size: var(--fs-XS);
   font-family: var(--ff-sub);
   font-weight: var(--fw-small);
-} 
+}
 
 /* backgrounds */
-.bg-board{
+.bg-board {
   background-color: var(--clr-base-100);
 }
-.bg-container-weak{
+
+.bg-container-weak {
   background-color: var(--clr-base-200);
 }
-.bg-container-strong{
+
+.bg-container-strong {
   background-color: var(--clr-base-900);
 }
-.bg-accent-weak{
+
+.bg-accent-weak {
   background-color: var(--clr-accent-100);
 }
-.bg-accent-strong{
+
+.bg-accent-strong {
   background-color: var(--clr-accent-200);
 }
 
 /* color styling */
-.clr-light{
+.clr-light {
   color: var(--clr-base-9000);
 }
-.clr-accent{
+
+.clr-accent {
   color: var(--clr-accent-200);
 }
 
 /* element styling */
-.btn-standard{
+.btn-standard {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -245,16 +260,17 @@ button{
   color: var(--clr-base-900);
 
   cursor: pointer;
-  
+
 }
 
-.link-standard{
+.link-standard {
   display: flex;
   width: 70%;
   pointer-events: none;
   cursor: default;
 }
-.link-standard:hover{
+
+.link-standard:hover {
   opacity: 80%;
 }
 
@@ -264,13 +280,13 @@ button{
 /* ----------------- */
 /*Custom styles*/
 /* ----------------- */
-.wrapper{
+.wrapper {
   flex-direction: column;
   position: relative;
   background-color: rgb(0, 0, 0, 0);
 }
 
-#nav-menu{
+#nav-menu {
   z-index: 900;
   max-width: 20rem;
   min-width: 5rem;
@@ -279,7 +295,8 @@ button{
   background-color: rgb(0, 0, 0, 0);
   cursor: pointer;
 }
-.nav-buttons{
+
+.nav-buttons {
   z-index: 500;
   position: absolute;
 
@@ -287,57 +304,68 @@ button{
   gap: 0.625rem;
   width: 100%;
 
-  
+
 
   opacity: 0;
 
 }
-#button-animation[data-pressed="on"]> .link-standard{
+
+#button-animation[data-pressed="on"]>.link-standard {
   pointer-events: all;
 }
 
-#nav-btn-1:hover{
-  color:#6441a5;
+#nav-btn-1:hover {
+  color: #6441a5;
   text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
-#nav-btn-2:hover{
+
+#nav-btn-2:hover {
   text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
-#nav-btn-3:hover{
+
+#nav-btn-3:hover {
   text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
-#nav-btn-4:hover{
+
+#nav-btn-4:hover {
   text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
-#nav-btn-5:hover{
+
+#nav-btn-5:hover {
   text-shadow: 0 0 0.5rem var(--clr-base-100);
 }
-#nav-btn-5::before{
+
+#nav-btn-5::before {
   content: "Terms of service";
 }
 
 /* ----------------- */
 /*     Svg styles    */
 /* ----------------- */
-#nav-menu-svg{
+#nav-menu-svg {
   width: 100%;
   height: 100%;
 }
-#logo-bg{
+
+#logo-bg {
   fill: var(--clr-base-200);
 }
-#name-box{
+
+#name-box {
   fill: var(--clr-base-200);
 }
-#name-box-glow{
+
+#name-box-glow {
   fill: var(--clr-base-900);
 }
+
 #rihsuri,
-#rihsuri-glow{
+#rihsuri-glow {
   fill: var(--clr-base-900);
 }
+
 #tri-body,
-#tri-glow{
+#tri-glow {
   stroke: var(--clr-base-900);
 }
 
@@ -352,137 +380,170 @@ button{
   animation: breath 2s linear infinite;
 } */
 
-#nav-menu[data-pressed="on"]{ 
-  animation: toMove var(--animation-speed) cubic-bezier(.2,.41,0,1.47) 0s forwards;
+#nav-menu[data-pressed="on"] {
+  animation: toMove var(--animation-speed) cubic-bezier(.2, .41, 0, 1.47) 0s forwards;
 }
 
-#nav-menu[data-pressed="on"] > #nav-menu-svg >
-#name-box{
-  transform: translateZ(0);
-  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
-}
-#nav-menu[data-pressed="on"] > #nav-menu-svg >
-#name-box-glow{
-  transform: translateZ(0);
-  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
-}
-#nav-menu[data-pressed="on"] > #nav-menu-svg >
-#rihsuri{
-  transform: translateZ(0);
-  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
-}
-#nav-menu[data-pressed="on"] > #nav-menu-svg >
-#rihsuri-glow{
+#nav-menu[data-pressed="on"]>#nav-menu-svg>#name-box {
   transform: translateZ(0);
   animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
 }
 
-#nav-menu[data-pressed="on"] > #nav-menu-svg >
-#tri-body{
+#nav-menu[data-pressed="on"]>#nav-menu-svg>#name-box-glow {
+  transform: translateZ(0);
+  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
+}
+
+#nav-menu[data-pressed="on"]>#nav-menu-svg>#rihsuri {
+  transform: translateZ(0);
+  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
+}
+
+#nav-menu[data-pressed="on"]>#nav-menu-svg>#rihsuri-glow {
+  transform: translateZ(0);
+  animation: toCenter var(--animation-speed) ease-in-out 0s forwards;
+}
+
+#nav-menu[data-pressed="on"]>#nav-menu-svg>#tri-body {
   transform: translateZ(0);
   transform-origin: center;
   animation: spin var(--animation-speed) ease-in-out 0s forwards;
 }
 
-#nav-menu[data-pressed="on"] > #nav-menu-svg >
-#tri-glow{
+#nav-menu[data-pressed="on"]>#nav-menu-svg>#tri-glow {
   transform: translateZ(0);
   transform-origin: center;
   animation: spin var(--animation-speed) ease-in-out 0s forwards;
 }
 
-#nav-menu-svg{
+#nav-menu-svg {
   transform: translateZ(0);
   animation: svgShadow 4.5s ease-in-out infinite;
 }
+
 /* animate-reverse */
-#nav-menu[data-pressed="off"]{ 
+#nav-menu[data-pressed="off"] {
   transform: translateZ(0);
   animation: toMoveBack var(--animation-speed-fast) ease-out 0s forwards;
 }
-#nav-menu[data-pressed="off"] > #nav-menu-svg >
-#name-box {
+
+#nav-menu[data-pressed="off"]>#nav-menu-svg>#name-box {
   transform: translateZ(0);
   animation: toBorder var(--animation-speed-fast) ease-out 0s forwards;
 }
-#nav-menu[data-pressed="off"] > #nav-menu-svg >
-#name-box-glow {
+
+#nav-menu[data-pressed="off"]>#nav-menu-svg>#name-box-glow {
   transform: translateZ(0);
   animation: toBorder var(--animation-speed-fast) ease-out 0s forwards;
 }
-#nav-menu[data-pressed="off"] > #nav-menu-svg >
-#rihsuri {
+
+#nav-menu[data-pressed="off"]>#nav-menu-svg>#rihsuri {
   transform: translateZ(0);
   animation: toBorder var(--animation-speed-fast) ease-out 0s forwards;
 }
-#nav-menu[data-pressed="off"] > #nav-menu-svg >
-#rihsuri-glow{
+
+#nav-menu[data-pressed="off"]>#nav-menu-svg>#rihsuri-glow {
   transform: translateZ(0);
   animation: toBorder var(--animation-speed-fast) ease-out 0s forwards;
 }
-#nav-menu[data-pressed="off"] >#nav-menu-svg >
-#tri-body{
-  transform: translateZ(0);
-  transform-origin: center;
-  animation: backSpin var(--animation-speed-fast) ease-out 0s forwards;
-}
-#nav-menu[data-pressed="off"] >#nav-menu-svg >
-#tri-glow{
+
+#nav-menu[data-pressed="off"]>#nav-menu-svg>#tri-body {
   transform: translateZ(0);
   transform-origin: center;
   animation: backSpin var(--animation-speed-fast) ease-out 0s forwards;
 }
 
-#nav-menu[data-pressed="on"] > 
-#nav-menu-svg{
+#nav-menu[data-pressed="off"]>#nav-menu-svg>#tri-glow {
+  transform: translateZ(0);
+  transform-origin: center;
+  animation: backSpin var(--animation-speed-fast) ease-out 0s forwards;
+}
+
+#nav-menu[data-pressed="on"]>#nav-menu-svg {
   transform: translateZ(0);
   animation: none;
 }
 
 /* move */
 @keyframes toMove {
-  from{transform: translateY(0px);}
-  to{transform: translateY(-50%);}
+  from {
+    transform: translateY(0px);
+  }
+
+  to {
+    transform: translateY(-50%);
+  }
 }
+
 @keyframes spin {
-  from{transform: rotate(0deg);}
-  to{transform: rotate(240deg);}
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(240deg);
+  }
 }
+
 @keyframes toCenter {
-  from{transform: translate(0%);}
-  to{transform: translate(-18%, -2%);}
+  from {
+    transform: translate(0%);
+  }
+
+  to {
+    transform: translate(-18%, -2%);
+  }
 }
+
 /* move back */
 @keyframes toMoveBack {
-  from{transform: translateY(-50%);}
-  to{transform: translateY(0%);}
+  from {
+    transform: translateY(-50%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
 }
+
 @keyframes backSpin {
-  from{transform: rotate(240deg);}
-  to{transform: rotate(0%);}
+  from {
+    transform: rotate(240deg);
+  }
+
+  to {
+    transform: rotate(0%);
+  }
 }
+
 @keyframes toBorder {
-  from{transform: translate(-18%, -2%);}
-  to{transform: translate(0%);}
+  from {
+    transform: translate(-18%, -2%);
+  }
+
+  to {
+    transform: translate(0%);
+  }
 }
 
-#button-animation[data-pressed="on"]{
+#button-animation[data-pressed="on"] {
   transform: translateZ(0);
-  animation: buttonMove var(--animation-speed) cubic-bezier(.5,.8,0.5,1.3) 0s forwards;
+  animation: buttonMove var(--animation-speed) cubic-bezier(.5, .8, 0.5, 1.3) 0s forwards;
 }
 
-#button-animation[data-pressed="off"]{
+#button-animation[data-pressed="off"] {
   transform: translateZ(0);
   animation: buttonMoveBack var(--animation-speed-fast) ease-in 0s forwards;
 }
 
 @keyframes buttonMove {
-  from{
+  from {
     transform: translateY(0%);
     scale: 20%;
     opacity: 0;
   }
-  to{
+
+  to {
     transform: translateY(55%);
     scale: 100%;
     opacity: 100%;
@@ -490,12 +551,13 @@ button{
 }
 
 @keyframes buttonMoveBack {
-  from{
+  from {
     transform: translateY(55%);
     scale: 100%;
     opacity: 100%;
   }
-  to{
+
+  to {
     transform: translateY(0%);
     scale: 20%;
     opacity: 0;
@@ -504,15 +566,20 @@ button{
 }
 
 @keyframes svgShadow {
-  0%{filter: drop-shadow(0rem 0rem 0rem rgb(0,0,0,0));
+  0% {
+    filter: drop-shadow(0rem 0rem 0rem rgb(0, 0, 0, 0));
   }
-  50% {filter: drop-shadow(0.2rem 0.2rem 0.5rem var(--clr-base-900));
+
+  50% {
+    filter: drop-shadow(0.2rem 0.2rem 0.5rem var(--clr-base-900));
   }
-  100%{filter: drop-shadow(0rem 0rem 0rem rgb(0,0,0,0));
+
+  100% {
+    filter: drop-shadow(0rem 0rem 0rem rgb(0, 0, 0, 0));
   }
 }
 
-#particles-js{
+#particles-js {
   z-index: -1;
   position: absolute;
   top: 0;
@@ -535,116 +602,139 @@ button{
 /* ----------------- */
 
 @media (min-width: 62.5rem) {
-  .nav-buttons{
+  .nav-buttons {
     opacity: 100;
   }
 
 
   @keyframes toMove {
-    from{transform: translateX(0px);}
-    to{transform: translateX(-55%);}
+    from {
+      transform: translateX(0px);
+    }
+
+    to {
+      transform: translateX(-55%);
+    }
   }
+
   @keyframes toMoveBack {
-    from{transform: translateX(-55%);}
-    to{transform: translateX(0%);}
+    from {
+      transform: translateX(-55%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
   }
+
   @keyframes buttonMove {
-    from{
+    from {
       transform: translateX(-100%);
       scale: 20%;
       opacity: 0;
     }
-    to{
+
+    to {
       scale: 100%;
       opacity: 100%;
     }
   }
-  
+
   @keyframes buttonMoveBack {
-    0%{
+    0% {
       scale: 1;
     }
-    60%{
+
+    60% {
       transform: translateX(-100%);
       scale: 0.1;
     }
   }
-  #button-animation{
+
+  #button-animation {
     animation: none !important;
   }
-  #button-animation[data-pressed="on"]> a >
-  #nav-btn-5{
+
+  #button-animation[data-pressed="on"]>a>#nav-btn-5 {
     transform: translateX(50%);
-    animation: buttonMove 1000ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    animation: buttonMove 1000ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
     display: block;
   }
-  #button-animation[data-pressed="on"]> a >
-  #nav-btn-4{
+
+  #button-animation[data-pressed="on"]>a>#nav-btn-4 {
     transform: translateX(40%);
-    animation: buttonMove 800ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    animation: buttonMove 800ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
     display: block;
   }
-  #button-animation[data-pressed="on"]> a >
-  #nav-btn-3{
+
+  #button-animation[data-pressed="on"]>a>#nav-btn-3 {
     transform: translateX(30%);
-    animation: buttonMove 600ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    animation: buttonMove 600ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
     display: block;
   }
-  #button-animation[data-pressed="on"]> a >
-  #nav-btn-2{
+
+  #button-animation[data-pressed="on"]>a>#nav-btn-2 {
     transform: translateX(20%);
-    animation: buttonMove 400ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    animation: buttonMove 400ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
     display: block;
   }
-  #button-animation[data-pressed="on"]> a >
-  #nav-btn-1{
+
+  #button-animation[data-pressed="on"]>a>#nav-btn-1 {
     transform: translateX(10%);
-    animation: buttonMove 200ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+    animation: buttonMove 200ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
     display: block;
   }
 
   /* close */
-  #button-animation[data-pressed="off"]> a >
-  #nav-btn-5{
-    animation: buttonMoveBack 1100ms cubic-bezier(.5,.8,0.5,1.3) forwards;
+  #button-animation[data-pressed="off"]>a>#nav-btn-5 {
+    animation: buttonMoveBack 1100ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
     scale: 0.1;
   }
-  #button-animation[data-pressed="off"]> a >
-  #nav-btn-4{
-    animation: buttonMoveBack 1000ms cubic-bezier(.5,.8,0.5,1.3) forwards;
-    scale: 0.1;
-  }
-  #button-animation[data-pressed="off"]> a >
-  #nav-btn-3{
-    animation: buttonMoveBack 800ms cubic-bezier(.5,.8,0.5,1.3) forwards;
-    scale: 0.1;
-  }
-  #button-animation[data-pressed="off"]> a >
-  #nav-btn-2{
-    animation: buttonMoveBack 600ms cubic-bezier(.5,.8,0.5,1.3) forwards;
-    scale: 0.1;
-  }
-  #button-animation[data-pressed="off"]> a >
-  #nav-btn-1{
-    animation: buttonMoveBack 400ms cubic-bezier(.5,.8,0.5,1.3) forwards;
-    scale: 0.1;
-  }
-  
 
-  #nav-btn-1{
-  scale: 0.1;}
-  #nav-btn-2{
-  scale: 0.1;}
-  #nav-btn-3{
-  scale: 0.1;}
-  #nav-btn-4{
-  scale: 0.1;}
-  #nav-btn-5{
-  scale: 0.1;}
+  #button-animation[data-pressed="off"]>a>#nav-btn-4 {
+    animation: buttonMoveBack 1000ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
+    scale: 0.1;
+  }
+
+  #button-animation[data-pressed="off"]>a>#nav-btn-3 {
+    animation: buttonMoveBack 800ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
+    scale: 0.1;
+  }
+
+  #button-animation[data-pressed="off"]>a>#nav-btn-2 {
+    animation: buttonMoveBack 600ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
+    scale: 0.1;
+  }
+
+  #button-animation[data-pressed="off"]>a>#nav-btn-1 {
+    animation: buttonMoveBack 400ms cubic-bezier(.5, .8, 0.5, 1.3) forwards;
+    scale: 0.1;
+  }
+
+
+  #nav-btn-1 {
+    scale: 0.1;
+  }
+
+  #nav-btn-2 {
+    scale: 0.1;
+  }
+
+  #nav-btn-3 {
+    scale: 0.1;
+  }
+
+  #nav-btn-4 {
+    scale: 0.1;
+  }
+
+  #nav-btn-5 {
+    scale: 0.1;
+  }
 }
 
 @media (max-width: 500px) {
-  #nav-btn-5::before{
+  #nav-btn-5::before {
     content: "Terms";
   }
 }
@@ -654,5 +744,4 @@ button{
 /* ----------------- */
 
 
- /* *{outline: 0.0625rem solid black;} */
-
+/* *{outline: 0.0625rem solid black;} */
