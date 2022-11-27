@@ -1,8 +1,8 @@
 if (window.innerWidth > 1080) {
-  particlesJS("particles-js", {
+  particlesJS("blue-dots", {
     "particles": {
       "number": {
-        "value": 8,
+        "value": 5,
         "density": {
           "enable": true,
           "value_area": 800
@@ -28,16 +28,16 @@ if (window.innerWidth > 1080) {
       },
       "opacity": {
         "value": 0,
-        "random": false,
+        "random": true,
         "anim": {
-          "enable": false,
-          "speed": 1,
+          "enable": true,
+          "speed": 0.1,
           "opacity_min": 0.1,
           "sync": false
         }
       },
       "size": {
-        "value": 129.97243009058678,
+        "value": 90,
         "random": true,
         "anim": {
           "enable": true,
@@ -55,12 +55,12 @@ if (window.innerWidth > 1080) {
       },
       "move": {
         "enable": true,
-        "speed": 1.5754233950374157,
+        "speed": 1,
         "direction": "none",
         "random": false,
         "straight": false,
-        "out_mode": "out",
-        "bounce": false,
+        "out_mode": "bounce",
+        "bounce": true,
         "attract": {
           "enable": false,
           "rotateX": 600,
@@ -69,7 +69,7 @@ if (window.innerWidth > 1080) {
       }
     },
     "interactivity": {
-      "detect_on": "canvas",
+      "detect_on": "window",
       "events": {
         "onhover": {
           "enable": false,
@@ -83,7 +83,7 @@ if (window.innerWidth > 1080) {
       },
       "modes": {
         "grab": {
-          "distance": 400,
+          "distance": 0,
           "line_linked": {
             "opacity": 1
           }
@@ -96,32 +96,23 @@ if (window.innerWidth > 1080) {
           "speed": 3
         },
         "repulse": {
-          "distance": 200,
-          "duration": 0.4
+          "distance": 0,
+          "duration": 0
         },
         "push": {
-          "particles_nb": 4
+          "particles_nb": 0
         },
         "remove": {
-          "particles_nb": 2
+          "particles_nb": 10
         }
       }
     },
     "retina_detect": true
   });
   var count_particles, stats, update;
-  stats = new Stats();
-  stats.setMode(0);
-  stats.domElement.style.position = "absolute";
-  stats.domElement.style.left = "0px";
-  stats.domElement.style.top = "0px";
-  document.body.appendChild(stats.domElement);
   count_particles = document.querySelector(".js-count-particles");
   update = function () {
-    stats.begin();
-    stats.end();
     if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
     }
     requestAnimationFrame(update);
   };

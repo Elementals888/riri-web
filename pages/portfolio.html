@@ -8,11 +8,14 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/portfolio.css">
     <script src="/scripts/main.js" defer></script>
     <script src="/node_modules/particles.js/particles.js" defer></script>
-    <script src="/scripts/custom-particles.js" defer></script>
+    <script src="/scripts/custom.js" defer></script>
 </head>
 
 <body class="bg-board">
@@ -49,7 +52,7 @@
 
         </a>
     </div>
-    <section>
+    <section id="about-section">
         <div class="wrapper flex align-center justify-center">
             <div id="about-screen" class="clr-light flex">
                 <h1 class="font-title">ABOUT</h1>
@@ -60,17 +63,54 @@
         </div>
         <div class="scroll-down flex align-center">
             <p class="font-subtext clr-light">scroll down for more</p>
+            <a href="#portfolio-section">
             <svg viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
                 <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
                 <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
-            </svg>
+            </svg></a>
         </div>
     </section>
-    <section>
-        <div class="wrapper"></div>
+    <section id="portfolio-section">
+        <div class="scroll-down flex align-center">
+            <p class="font-subtext clr-light">scroll down for more</p>
+            <a href="#pricing-section">
+            <svg viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+            </svg></a>
+        </div>
+        <div class="wrapper grid" id="portfolio-page">
+            <div class="portfolio-item font-subtitle clr-light" id="pi-1">
+                <a href="" class="price clr-light"><div class="font-subtext">pricing</div></a>
+                <button class="material-symbols-outlined btn-left">arrow_back_ios</button>
+                <button class="material-symbols-outlined btn-right">arrow_forward_ios</button>
+        </div>
+            <div class="portfolio-item font-subtitle clr-light" id="pi-2"><a href="" class="price clr-light"><div class="font-subtext">pricing</div></a></div>
+            <div class="portfolio-item font-subtitle clr-light" id="pi-3"><a href="" class="price clr-light"><div class="font-subtext">pricing</div></a></div>
+            <div class="portfolio-item font-subtitle clr-light" id="pi-4"><a href="" class="price clr-light"><div class="font-subtext">pricing</div></a></div>
+            <div class="portfolio-item font-subtitle clr-light" id="pi-5"><a href="" class="price clr-light"><div class="font-subtext">pricing</div></a>
+            <button class="material-symbols-outlined btn-left">arrow_back_ios</button>
+            <button class="material-symbols-outlined btn-right">arrow_forward_ios</button>
+            <div class="scroller flex snap-inline">
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+        </div></div>
     </section>
-    <section>
+    <section id="pricing-section">
         <div class="wrapper"></div>
     </section>
     <section>

@@ -1,9 +1,10 @@
 /* developed by EcXscariot/yourOrdinaryCarrot */
 /* last modified 11/23/2022 */
-
-const navMenu = document.getElementById('nav-menu');
+try {
+    const navMenu = document.getElementById('nav-menu');
 const navButtons = document.querySelector('.nav-buttons');
 
+index();
 
 function index() {
     navBtn();
@@ -31,4 +32,10 @@ function animateBack() {
     navButtons.setAttribute('data-pressed', 'off');
 }
 
-index();
+} catch (TypeError) {
+
+}
+
+
+
+
