@@ -235,7 +235,7 @@ button {
 
 /* color styling */
 .clr-light {
-  color: var(--clr-base-9000);
+  color: var(--clr-base-900);
 }
 
 .clr-accent {
@@ -257,7 +257,7 @@ button {
   color: var(--clr-base-900);
 
   cursor: pointer;
-
+  
 }
 
 .link-standard {
@@ -415,7 +415,7 @@ button {
 
 #nav-menu-svg {
   transform: translateZ(0);
-  animation: svgShadow 4.5s ease-in-out infinite;
+  animation: svgShadow 4.5s linear infinite;
 }
 
 /* animate-reverse */

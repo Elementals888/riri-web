@@ -1,41 +1,42 @@
 /* developed by EcXscariot/yourOrdinaryCarrot */
 /* last modified 11/23/2022 */
-try {
-    const navMenu = document.getElementById('nav-menu');
-const navButtons = document.querySelector('.nav-buttons');
-
-index();
-
-function index() {
-    navBtn();
-}
 
 
-function navBtn() {
-    navMenu.addEventListener("click", () => {
-        const isClicked = navMenu.getAttribute('data-pressed');
-        if (!isClicked || isClicked == 'off') {
-            navMenu.setAttribute('data-pressed', 'on');
-            navButtons.setAttribute('data-pressed', 'on');
-        } else {
-            animateBack();
-        }
-        navMenu.disabled = true;
-        let buttonTimer = setTimeout(() => {
-            navMenu.disabled = false;
-        }, 700)
+mouseGlow();
+
+// cursor trace function
+const mouse = document.querySelector(".mouse");
+const triangle = document.getElementById("mouse-triangle");
+
+function mouseMove(e, acctivated) {
+    const x = e.clientX - mouse.offsetWidth / 2,
+          y = e.clientY - mouse.offsetHeight / 2;
+
+    const keyframes = {
+        transform: `translate(${x}px, ${y}px)`
+    }
+    mouse.animate(keyframes, {
+        duration: 1000,
+        fill: "forwards"
     });
-}
 
-function animateBack() {
-    navMenu.setAttribute('data-pressed', 'off');
-    navButtons.setAttribute('data-pressed', 'off');
-}
-
-} catch (TypeError) {
+    mouse.classList.add("mouse-hover");
+    mouse.classList.remove("acctivate");
+    triangle.classList.remove("mouse-triangle-invisible");
 
 }
 
-
-
-
+function mouseGlow() {
+window.onmousemove = e => {
+    const possible = e.target.closest(".trigger"),
+          acctivated = possible !== null;    
+          
+          mouseMove(e, acctivated);
+          if (acctivated) {
+            mouse.classList.remove("mouse-hover");
+            mouse.classList.add("acctivate");
+            triangle.classList.add("mouse-triangle-invisible");
+        }
+     
+}
+}

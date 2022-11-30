@@ -8,47 +8,55 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/portfolio.css">
+    <link rel="stylesheet" href="/styles/mouse-effects.css">
     <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/portfolio.js" defer></script>
     <script src="/node_modules/particles.js/particles.js" defer></script>
     <script src="/scripts/custom.js" defer></script>
 </head>
 
 <body class="bg-board">
     <div id="blue-dots"></div>
+            mouse.classList.remove("mouse-triangle");
+    <div class="mouse"><svg id="mouse-svg" viewBox="0 0 730 730" fill="none"><path class="mouse-triangle-invisible" id="mouse-triangle" d="M217.777 450L365.001 195L512.225 450H217.777Z" stroke-width="24" /></svg></div>
     <div class="nav-list flex">
-        <a class="header-link flex justify-center align-center" href="https://twitter.com/RIHSURI" target="_blank" rel="noopener noreferrer"><svg id="twitter"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                viewBox="0 0 248 204">
-                    <path
-                        d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04
+        <a class="header-link flex justify-center align-center" href="https://twitter.com/RIHSURI" target="_blank"
+            rel="noopener noreferrer"><svg class="trigger" id="twitter" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 248 204">
+                <path
+                    d="M221.95,51.29c0.15,2.17,0.15,4.34,0.15,6.53c0,66.73-50.8,143.69-143.69,143.69v-0.04
                C50.97,201.51,24.1,193.65,1,178.83c3.99,0.48,8,0.72,12.02,0.73c22.74,0.02,44.83-7.61,62.72-21.66
                c-21.61-0.41-40.56-14.5-47.18-35.07c7.57,1.46,15.37,1.16,22.8-0.87C27.8,117.2,10.85,96.5,10.85,72.46c0-0.22,0-0.43,0-0.64
                c7.02,3.91,14.88,6.08,22.92,6.32C11.58,63.31,4.74,33.79,18.14,10.71c25.64,31.55,63.47,50.73,104.08,52.76
                c-4.07-17.54,1.49-35.92,14.61-48.25c20.34-19.12,52.33-18.14,71.45,2.19c11.31-2.23,22.15-6.38,32.07-12.26
                c-3.77,11.69-11.66,21.62-22.2,27.93c10.01-1.18,19.79-3.86,29-7.95C240.37,35.29,231.83,44.14,221.95,51.29z" />
             </svg></a>
-        <a class="header-link flex justify-center align-center" href="https://discord.gg/5HrmtE6EFZ" target="_blank" rel="noopener noreferrer">
-            <svg id="discord" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36">
+        <a class="header-link flex justify-center align-center" href="https://discord.gg/5HrmtE6EFZ" target="_blank"
+            rel="noopener noreferrer">
+            <svg class="trigger" id="discord" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36">
                 <path
                     d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" />
             </svg>
         </a>
-        <a class="header-link flex justify-center align-center" href="https://www.twitch.tv/rihsuri" target="_blank" rel="noopener noreferrer">
-            <svg id="twitch" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 viewBox="0 0 2400 2800">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-</style>
-	<polygon class="st0" points="2200,1300 1800,1700 1400,1700 1050,2050 1050,1700 600,1700 600,200 2200,200 	"/>
-			<path d="M500,0L0,500v1800h600v500l500-500h400l900-900V0H500z M2200,1300l-400,400h-400l-350,350v-350H600V200h1600V1300z"/>
-			<rect x="1700" y="550" width="200" height="600"/>
-			<rect x="1150" y="550" width="200" height="600"/>
-</svg>
+        <a class="header-link flex justify-center align-center" href="https://www.twitch.tv/rihsuri" target="_blank"
+            rel="noopener noreferrer">
+            <svg class="trigger" id="twitch" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 2400 2800">
+                <style type="text/css">
+                    .st0 {
+                        fill: #FFFFFF;
+                    }
+                </style>
+                <polygon class="st0"
+                    points="2200,1300 1800,1700 1400,1700 1050,2050 1050,1700 600,1700 600,200 2200,200 	" />
+                <path
+                    d="M500,0L0,500v1800h600v500l500-500h400l900-900V0H500z M2200,1300l-400,400h-400l-350,350v-350H600V200h1600V1300z" />
+                <rect x="1700" y="550" width="200" height="600" />
+                <rect x="1150" y="550" width="200" height="600" />
+            </svg>
 
         </a>
     </div>
@@ -64,54 +72,225 @@
         <div class="scroll-down flex align-center">
             <p class="font-subtext clr-light">scroll down for more</p>
             <a href="#portfolio-section">
-            <svg viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
-                <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
-                <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
-            </svg></a>
+                <svg class="trigger" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></a>
         </div>
     </section>
     <section id="portfolio-section">
         <div class="scroll-down flex align-center">
             <p class="font-subtext clr-light">scroll down for more</p>
-            <a href="#pricing-section">
-            <svg viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
-                <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
-                <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
-            </svg></a>
+            <a href="#comissions-section">
+                <svg class="trigger" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></a>
         </div>
         <div class="wrapper grid" id="portfolio-page">
-            <div class="portfolio-item font-subtitle clr-light" id="pi-1">
-                <a href="" class="price clr-light"><div class="font-subtext">pricing</div></a>
-                <button class="material-symbols-outlined btn-left">arrow_back_ios</button>
-                <button class="material-symbols-outlined btn-right">arrow_forward_ios</button>
-        </div>
-            <div class="portfolio-item font-subtitle clr-light" id="pi-2"><a href="" class="price clr-light"><div class="font-subtext">pricing</div></a></div>
-            <div class="portfolio-item font-subtitle clr-light" id="pi-3"><a href="" class="price clr-light"><div class="font-subtext">pricing</div></a></div>
-            <div class="portfolio-item font-subtitle clr-light" id="pi-4"><a href="" class="price clr-light"><div class="font-subtext">pricing</div></a></div>
-            <div class="portfolio-item font-subtitle clr-light" id="pi-5"><a href="" class="price clr-light"><div class="font-subtext">pricing</div></a>
-            <button class="material-symbols-outlined btn-left">arrow_back_ios</button>
-            <button class="material-symbols-outlined btn-right">arrow_forward_ios</button>
-            <div class="scroller flex snap-inline">
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-            <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-        </div></div>
+            <div class="portfolio-item font-subtitle clr-light" id="pi-1" data-carousel>
+                <ul data-pages>
+                    <li class="page" data-current="true">
+                        <img src="https://via.placeholder.com/600" alt="">
+                    </li>
+                    <li class="page">
+                        <img src="https://via.placeholder.com/700" alt="">
+                    </li>
+                    <li class="page">
+                        <img src="https://via.placeholder.com/800" alt="">
+                    </li>
+                </ul>
+                <a href="" class="price clr-light">
+                    <div class="font-subtext trigger">pricing</div>
+                </a>
+                <button id="pi1-right" class="btn-right trigger" data-button="next"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button>
+                <button id="pi1-left" class="btn-left trigger" data-button="prev"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button>
+            </div>
+            <div class="portfolio-item font-subtitle clr-light" id="pi-2" data-carousel>
+                <ul data-pages>
+                    <li class="page" data-current="true">
+                        <img src="https://via.placeholder.com/600" alt="">
+                    </li>
+                    <li class="page">
+                        <img src="https://via.placeholder.com/700" alt="">
+                    </li>
+                    <li class="page">
+                        <img src="https://via.placeholder.com/800" alt="">
+                    </li>
+                </ul>
+                <a href="" class="price clr-light">
+                    <div class="font-subtext trigger">pricing</div>
+                </a>
+                <button id="pi2-right" class="btn-right trigger" data-button="next"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button>
+                <button id="pi2-left" class="btn-left trigger" data-button="prev"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button></div>
+            <div class="portfolio-item font-subtitle clr-light" id="pi-3" data-carousel>
+                <ul data-pages>
+                    <li class="page" data-current="true">
+                        <img src="https://via.placeholder.com/600" alt="">
+                    </li>
+                    <li class="page">
+                        <img src="https://via.placeholder.com/700" alt="">
+                    </li>
+                    <li class="page">
+                        <img src="https://via.placeholder.com/800" alt="">
+                    </li>
+                </ul>
+                <a href="" class="price clr-light">
+                    <div class="font-subtext trigger">pricing</div>
+                </a>
+                <a href="" class="price clr-light">
+                    <div class="font-subtext trigger">pricing</div>
+                </a>
+                <button id="pi3-right" class="material-symbols-outlined btn-right trigger" data-button="next"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button></button>
+                <button id="pi3-left" class=" btn-left trigger" data-button="prev"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button></button></div>
+            <div class="portfolio-item font-subtitle clr-light" id="pi-4" data-carousel>
+                <ul data-pages>
+                    <li class="page" data-current="true">
+                        <img src="https://via.placeholder.com/600" alt="">
+                    </li>
+                    <li class="page">
+                        <img src="https://via.placeholder.com/700" alt="">
+                    </li>
+                    <li class="page">
+                        <img src="https://via.placeholder.com/800" alt="">
+                    </li>
+                </ul>
+                <a href="" class="price clr-light">
+                    <div class="font-subtext trigger">pricing</div>
+                </a>
+                <a href="" class="price clr-light">
+                    <div class="font-subtext trigger">pricing</div>
+                </a>
+                <button id="pi4-right" class="btn-right trigger" data-button="next"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button></button>
+                <button id="pi4-left" class="btn-left trigger" data-button="prev"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button></button></div>
+            <div class="portfolio-item font-subtitle clr-light" id="pi-5">
+                
+                
+                
+                
+                <a href="" class="price clr-light">
+                    <div class="font-subtext trigger">pricing</div>
+                </a>
+                <button id="pi5-right" class="btn-right trigger"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button></button>
+                <button id="pi5-left" class=" btn-left trigger"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></button></button>
+                <div class="scroller flex snap-inline" data-scroller>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                </div>
+            </div>
     </section>
-    <section id="pricing-section">
-        <div class="wrapper"></div>
+    <section id="comissions-section">
+        <div class="scroll-down flex align-center">
+            <p class="font-subtext clr-light">scroll down for more</p>
+            <a href="#">
+                <svg class="trigger" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
+                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
+                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
+                </svg></a>
+        </div>
+        <div class="wrapper flex clr-light" id="prices-page">
+            <div class="font-title">Services</div>
+            <div class="font-subtext">*Payment accepted only through paypal</div>
+            <div class="font-subtext">*Payment accepted only in united states dollars (USD$)</div>
+            <div class="service-list outline grid">
+                
+                <dialog id="emote-modal" class="product-screen"><button id="emote-close-button" class="close-button"></button></dialog>
+                <dialog id="chibi-modal" class="product-screen"><button id="chibi-close-button" class="close-button"></button></dialog>
+                <dialog id="schedule-modal" class="product-screen"><button id="schedule-close-button" class="close-button"></button></dialog>
+                <dialog id="bust-modal" class="product-screen"><button id="bust-close-button" class="close-button"></button></dialog>
+                <dialog id="overlay-modal" class="product-screen"><button id="overlay-close-button" class="close-button"></button></dialog>
+                <dialog id="half-body-modal" class="product-screen"><button id="half-body-close-button" class="close-button"></button></dialog>
+                <dialog id="char-design-modal" class="product-screen"><button id="char-design-close-button" class="close-button"></button></dialog>
+                <dialog id="full-body-modal" class="product-screen"><button id="full-body-close-button" class="close-button"></button></dialog>
+                <dialog id="ref-sheet-modal" class="product-screen"><button id="ref-sheet-close-button" class="close-button"></button></dialog>
+                <dialog id="live-2d-modal" class="product-screen"><button id="live-2d-close-button" class="close-button"></button></dialog>
+                <dialog id="live-2d-chibi-modal" class="product-screen"><button id="live-2d-chibi-close-button" class="close-button"></button></dialog>
+
+
+                <div class="font-subtitle service-label trigger" id="emotes"><div class="material-symbols-outlined">auto_awesome</div> Emotes</div>
+                <div class="font-subtitle service-label trigger" id="chibi"><div class="material-symbols-outlined">auto_awesome</div> Chibi</div>
+                <div class="font-subtitle service-label trigger" id="bust"><div class="material-symbols-outlined">auto_awesome</div> Bust</div>
+                <div class="font-subtitle service-label trigger" id="half-body"><div class="material-symbols-outlined">auto_awesome</div> Half-body</div>
+                <div class="font-subtitle service-label trigger" id="full-body"><div class="material-symbols-outlined">auto_awesome</div> Full-body</div>
+                <div class="font-subtitle service-label trigger" id="live-2d"><div class="material-symbols-outlined">auto_awesome</div> Live2D model</div>
+                <div class="font-subtitle service-label trigger" id="live-2d-chibi"><div class="material-symbols-outlined">auto_awesome</div> Live2D chibi model</div>
+                <div class="font-subtitle service-label trigger" id="schedules"><div class="material-symbols-outlined">auto_awesome</div> Schedules</div>
+                <div class="font-subtitle service-label trigger" id="overlays"><div class="material-symbols-outlined">auto_awesome</div> Overlays</div>
+                <div class="font-subtitle service-label trigger" id="char-design"><div class="material-symbols-outlined">auto_awesome</div> Character design</div>
+                <div class="font-subtitle service-label trigger" id="ref-sheet"><div class="material-symbols-outlined">auto_awesome</div> Reference Sheet</div>
+               
+               
+                <div class="font-body text-center-v price-tag" id="price-emotes">$50</div>
+                <div class="font-body text-center-v price-tag" id="price-bust">$250</div>
+                <div class="font-body text-center-v price-tag" id="price-chibi">$200</div>
+                <div class="font-body text-center-v price-tag" id="price-half-body">$400</div>
+                <div class="font-body text-center-v price-tag" id="price-full-body">$800</div>
+                <div class="font-body text-center-v price-tag" id="price-live-2d">$1700</div>
+                <div class="font-body text-center-v price-tag" id="price-live-2d-chibi">$500</div>
+                <div class="font-body text-center-v price-tag" id="price-schedules">$200</div>
+                <div class="font-body text-center-v price-tag" id="price-overlays">$250</div>
+                <div class="font-body text-center-v price-tag" id="price-char-design">$400</div>
+                <div class="font-body text-center-v price-tag" id="price-ref-sheet">$800</div>
+
+            </div>
+        </div>
     </section>
     <section>
         <div class="wrapper"></div>

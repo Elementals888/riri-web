@@ -9,17 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mouse-effects.css">
     <script src="node_modules/particles.js/particles.js" defer></script>
     <script src="scripts/custom-particles.js" defer></script>
+    <script src="scripts/index.js" defer></script>
     <script src="scripts/main.js" defer></script>
     <title>Riri-website-main-menu</title>
 </head>
 
 <body class="flex align-center justify-center bg-board">
     <div id="particles-js"></div>
+    <div class="mouse mouse-hover"><svg id="mouse-svg" viewBox="0 0 730 730" fill="none"><path id="mouse-triangle" d="M217.777 450L365.001 195L512.225 450H217.777Z" stroke-width="24" /></svg></div>
     <div class="wrapper bg-board flex justify-center align-center">
-        <button id="nav-menu">
-            <svg id="nav-menu-svg" width="730" height="730" viewBox="0 0 730 730" fill="none"
+        <button class="trigger" id="nav-menu">
+            <svg id="nav-menu-svg" viewBox="0 0 730 730" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <circle id="logo-bg" cx="365" cy="365" r="365" />
                 <g id="tri-glow" filter="url(#filter0_f_0_1)">
@@ -60,15 +63,15 @@
         </button>
         <section id="button-animation" class="nav-buttons flex align-center">
             <a class="link-standard" href="https://www.twitch.tv/rihsuri" target="_blank"
-                rel="noopener noreferrer"><button id="nav-btn-1" class="btn-standard font-subtitle">Twitch</button></a>
+                rel="noopener noreferrer"><button id="nav-btn-1" class="btn-standard font-subtitle trigger">Twitch</button></a>
             <a class="link-standard" href="pages/portfolio.html#portfolio-section"><button id="nav-btn-2"
-                    class="btn-standard font-subtitle">Portfolio</button></a>
+                    class="btn-standard font-subtitle trigger">Portfolio</button></a>
             <a class="link-standard" href="pages/contact.html"><button id="nav-btn-3"
-                    class="btn-standard font-subtitle">Contact</button></a>
-            <a class="link-standard" href="pages/comissions.html"><button id="nav-btn-4"
-                    class="btn-standard font-subtitle">Comissions</button></a>
+                    class="btn-standard font-subtitle trigger">Contact</button></a>
+            <a class="link-standard" href="pages/portfolio.html#comissions-section"><button id="nav-btn-4"
+                    class="btn-standard font-subtitle trigger">Comissions</button></a>
             <a class="link-standard" href="pages/terms.html"><button id="nav-btn-5"
-                    class="btn-standard font-subtitle"></button></a>
+                    class="btn-standard font-subtitle trigger"></button></a>
 
         </section>
     </div>

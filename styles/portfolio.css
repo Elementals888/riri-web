@@ -25,15 +25,16 @@
     --clr-base-500: #9f9cac;
     --clr-base-300: #70738f;
     --clr-base-100: #040000;
+    --clr-base-150: #0400006a;
     --clr-base-200: #0f0f0f;
     --clr-accent-200: #54cbed;
     --clr-accent-250: #00cff83b;
     --clr-accent-100: #72a8d4;
     --clr-base-translucent: rgba(159, 159, 159, 0.681);
-
+    --clr-special-invisible: rgba(0, 0, 0, 0);
     /*font-sizes*/
 
-    --fs-XL: 3rem;
+    --fs-XL: 6rem;
     --fs-L: 2.256rem;
     --fs-M: 1.5rem;
     --fs-S: 1rem;
@@ -81,7 +82,8 @@
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
-ol[role='list'] {
+ol[role='list'],
+li {
     list-style: none;
 }
 
@@ -267,15 +269,26 @@ button {
     transition-duration: 100ms;
 }
 
+.outline {
+    border: solid var(--clr-base-900);
+    border-radius: 0.5rem;
+}
+/* positioning */
+.text-center-v {
+    transform: translateY(25%);
+}
+
 
 /* ----------------- */
 /*  Custom  elements */
 /* ----------------- */
 /* global */
+*:focus{
+    filter: drop-shadow(0.2rem 0.2rem 10px var(--clr-base-900));
+}
 body {
     height: 100%;
 }
-
 section {
     position: relative;
     height: 100vh;
@@ -300,45 +313,103 @@ section {
     gap: 1rem;
     scrollbar-width: none;
     padding-inline: 1rem;
-   
+
 }
+
 .scroller-image {
     scroll-snap-align: start;
     aspect-ratio: 1;
     object-fit: cover;
     transition-duration: 5s;
 }
+
 .snap-inline {
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: 1rem;
 }
-.snap-inline > *{
+
+.snap-inline>* {
     scroll-snap-align: start;
 }
 
-.btn-left{
+.btn-left {
     position: absolute;
     top: 50%;
     translate: 0 -50%;
-    left: 0;
-    border-radius: 0rem 1rem 1rem 0rem;
-    height: 70%;
-    aspect-ratio: 1/5;
-    background-color: var(--clr-base-700);
+    left: 1rem;
+    border-radius: 50%;
+    height: 3rem;
+    background-color: var(--clr-special-invisible);
+    aspect-ratio: 1;
     z-index: 900;
+    rotate: 90deg;
+    cursor: pointer;
 }
 
-.btn-right{
+.btn-right {
     position: absolute;
     top: 50%;
     translate: 0 -50%;
-    right: 0;
-    border-radius: 1rem 0rem 0rem 1rem;
-    height: 70%;
-    aspect-ratio: 1/5;
-    background-color: var(--clr-base-700);
+    right: 1rem;
+    border-radius: 50%;
+    height: 3rem;
+    background-color: var(--clr-special-invisible);
+    aspect-ratio: 1;
     z-index: 900;
+    rotate: 270deg;
+    cursor: pointer;
 }
+.btn-svg {
+    width: 3rem;
+    height: 3rem;
+    opacity: 50%;
+}
+.btn-svg:hover {
+    opacity: 80%;
+}
+
+.product-screen {
+    margin: auto;
+    z-index: 7100;
+    height: 50vh;
+    aspect-ratio: 1;
+    background-color: white;
+}
+.product-screen::backdrop{
+    background: black;
+    opacity: 0.2;
+}
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 2rem;
+    aspect-ratio: 1;
+}
+.page {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-delay: 200ms;
+}
+.page > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.page[data-current="true"] {
+    opacity: 1;
+    z-index: 600;
+    transition-delay: 0ms;
+}
+
+.faded{
+    opacity: 10%;
+}
+
 /* section 1 */
 .nav-list {
     z-index: 10000;
@@ -419,9 +490,6 @@ section {
 }
 
 .portfolio-item:hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     filter: saturate(60%);
     transition-duration: 300ms;
     cursor: pointer;
@@ -433,29 +501,194 @@ section {
 
 #pi-1:hover::after {
     z-index: 800;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    translate: 50% -50%;
     content: "click me!";
 }
 
 #pi-2:hover::after {
     z-index: 800;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    translate: 50% -50%;
     content: "click me!";
 }
 
 #pi-3:hover::after {
     z-index: 800;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    translate: 50% -50%;
     content: "click me!";
 }
 
 #pi-4:hover::after {
     z-index: 800;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    translate: 50% -50%;
     content: "click me!";
 }
 
 #pi-5:hover::after {
     z-index: 800;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    translate: 50% -50%;
     content: "click me!";
 }
 
+/* section3 */
+#prices-page {
+    max-width: 100rem;
+    padding-inline:5rem;
+    padding-bottom: 5rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.service-list {
+    gap: 0.7rem;
+    grid-template-columns: 1.5fr 2fr 2fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 2rem;
+    background-color: var(--clr-base-150);
+}
+.service-list > .service-label:hover{
+    filter: drop-shadow(0rem 0rem 1px var(--clr-accent-100));
+    outline: solid var(--clr-base-800);
+    cursor: pointer;
+    transition-duration: 100ms;
+}
+
+#emotes {
+    grid-column: 1;
+    grid-row: 2/3;
+}
+#price-emotes {
+    grid-column: 2;
+    grid-row: 2/3;
+}
+
+#chibi {
+    grid-column: 1;
+    grid-row: 3/4;
+}
+#price-chibi {
+    grid-column: 2;
+    grid-row: 3/4;
+}
+#bust {
+    grid-column: 1;
+    grid-row: 4/5;
+}
+#price-bust {
+    grid-column: 2;
+    grid-row: 4/5;
+}
+
+
+
+#half-body {
+
+    grid-column: 1;
+    grid-row: 5/6;
+}
+#price-half-body {
+
+    grid-column: 2;
+    grid-row: 5/6;
+}
+
+#full-body {
+
+    grid-column: 1;
+    grid-row: 6/7;
+}
+
+#price-full-body {
+
+    grid-column: 2;
+    grid-row: 6/7;
+}
+
+#live-2d {
+
+    grid-column: 1;
+    grid-row: 7/8;
+}
+
+#price-live-2d {
+
+    grid-column: 2;
+    grid-row: 7/8;
+}
+
+#schedules {
+
+    grid-column: 3;
+    grid-row: 3/4;
+}
+
+#price-schedules {
+
+    grid-column: 4;
+    grid-row: 3/4;
+}
+
+#overlays {
+
+    grid-column: 3;
+    grid-row: 4/5;
+}
+
+#price-overlays {
+
+    grid-column: 4;
+    grid-row: 4/5;
+}
+
+#char-design {
+
+    grid-column: 3;
+    grid-row: 5/6;
+}
+
+#price-char-design {
+
+    grid-column: 4;
+    grid-row: 5/6;
+}
+
+#ref-sheet {
+
+    grid-column: 3;
+    grid-row: 6/7;
+}
+
+#price-ref-sheet {
+
+    grid-column: 4;
+    grid-row: 6/7;
+}
+#live-2d-chibi {
+
+    grid-column: 3;
+
+    grid-row: 7/8;
+}
+#price-live-2d-chibi {
+
+    grid-column: 4;
+
+    grid-row: 7/8;
+}
 
 #blue-dots {
     z-index: -1;
@@ -496,8 +729,9 @@ section {
     width: 1rem;
     height: 1rem;
 }
-
-
+.mouse-triangle-invisible{
+    display: none;
+}
 /* ----------------- */
 /*   Svg animations  */
 /* ----------------- */
@@ -505,7 +739,7 @@ section {
 svg {
     width: 2rem;
     height: 2rem;
-    animation: svgShadow 2s linear infinite;
+    filter: drop-shadow(0rem 0.1rem 0.1rem var(--clr-base-600));
 }
 
 svg #down-arrow-bg {
@@ -528,23 +762,6 @@ svg:hover>#pointer-1 {
 svg:hover>#pointer-2 {
     transform: translateY(-10%);
     transition: 1s;
-}
-
-@keyframes svgShadow {
-    0% {
-        filter: drop-shadow(-0.1rem -0.1rem 0.01rem rgb(0, 0, 0, 0));
-    }
-
-    50% {
-        filter: drop-shadow(-0.1rem 0.1rem 0.1rem var(--clr-base-600));
-    }
-    80%{
-        filter: drop-shadow(0.1rem 0.1rem 0.1rem var(--clr-base-600));
-    }
-
-    100% {
-        filter: drop-shadow(0.1rem -0.1rem 0rem rgb(0, 0, 0, 0));
-    }
 }
 
 /* *{outline: 0.0625rem solid red;} */
