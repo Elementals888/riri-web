@@ -10,17 +10,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/portfolio.css">
-    <link rel="stylesheet" href="/styles/mouse-effects.css">
-    <script src="/scripts/main.js" defer></script>
-    <script src="/scripts/portfolio.js" defer></script>
-    <script src="/node_modules/particles.js/particles.js" defer></script>
-    <script src="/scripts/custom.js" defer></script>
+    <link rel="stylesheet" href="../styles/comissions.css">
+    <link rel="stylesheet" href="../styles/mouse-effects.css">
+    <link rel="stylesheet" href="../styles/mouse-navigation.css">
+    <script src="../scripts/main.js" defer></script>
+    <script src="../scripts/comissions.js" defer></script>
+    <script src="../node_modules/particles.js/particles.js" defer></script>
+    <script src="../scripts/custom.js" defer></script>
 </head>
 
 <body class="bg-board">
     <div id="blue-dots"></div>
-            mouse.classList.remove("mouse-triangle");
+    <div id="context-menu">
+        <div class="navigation-item"><a class="fill-div clr-accent" href="\index.html">Menu</a></div>
+        <div class="navigation-item"><a class="fill-div clr-accent" href="../pages/comissions.html#portfolio-section" target="_blank">Portfolio</a></div>
+        <div class="navigation-item"><a class="fill-div clr-accent" href="../pages/contact.html">Contact</a></div>
+        <div class="navigation-item"><a class="fill-div clr-accent" href="../pages/comissions.html#comissions-section">Comissions</a></div>
+        <div class="navigation-item"><a href="../pages/comissions.html#terms" class="fill-div clr-accent"> Terms of service</a></div>
+    </div>
     <div class="mouse"><svg id="mouse-svg" viewBox="0 0 730 730" fill="none"><path class="mouse-triangle-invisible" id="mouse-triangle" d="M217.777 450L365.001 195L512.225 450H217.777Z" stroke-width="24" /></svg></div>
     <div class="nav-list flex">
         <a class="header-link flex justify-center align-center" href="https://twitter.com/RIHSURI" target="_blank"
@@ -60,26 +67,10 @@
 
         </a>
     </div>
-    <section id="about-section">
-        <div class="wrapper flex align-center justify-center">
-            <div id="about-screen" class="clr-light flex">
-                <h1 class="font-title">ABOUT</h1>
-                <p class="font-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem vel esse animi!
-                    Repellendus aliquam officiis eum saepe quaerat nemo explicabo illum modi aut pariatur nihil
-                    veritatis, numquam tempore reprehenderit eveniet!</p>
-            </div>
-        </div>
-        <div class="scroll-down flex align-center">
-            <p class="font-subtext clr-light">scroll down for more</p>
-            <a href="#portfolio-section">
-                <svg class="trigger" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
-                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
-                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
-                </svg></a>
-        </div>
-    </section>
-    <section id="portfolio-section">
+    <section id="samples-section">
+        <div class="title-wrapper flex">
+            <div class="dot"></div>
+        <p class="clr-light font-title section-title">Samples </p><div class="bar"></div></div>
         <div class="scroll-down flex align-center">
             <p class="font-subtext clr-light">scroll down for more</p>
             <a href="#comissions-section">
@@ -89,21 +80,21 @@
                     <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
                 </svg></a>
         </div>
-        <div class="wrapper grid" id="portfolio-page">
-            <div class="portfolio-item font-subtitle clr-light" id="pi-1" data-carousel>
+        <div class="wrapper grid" id="samples-page">
+            <div class="samples-item font-subtitle clr-light outline bg-translucent" id="pi-1" data-carousel>
                 <ul data-pages>
                     <li class="page" data-current="true">
-                        <img src="https://via.placeholder.com/600" alt="">
+                        <img src="../public/e6c24826.jpg" alt="">
                     </li>
                     <li class="page">
-                        <img src="https://via.placeholder.com/700" alt="">
+                        <img src="../public/fccec07a.jpg" alt="">
                     </li>
                     <li class="page">
-                        <img src="https://via.placeholder.com/800" alt="">
+                        <img src="../public/f184c089.jpg" alt="">
                     </li>
                 </ul>
                 <a href="" class="price clr-light">
-                    <div class="font-subtext trigger">pricing</div>
+                    <div class="font-subtext trigger clr-accent">pricing</div>
                 </a>
                 <button id="pi1-right" class="btn-right trigger" data-button="next"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
@@ -116,76 +107,20 @@
                     <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
                 </svg></button>
             </div>
-            <div class="portfolio-item font-subtitle clr-light" id="pi-2" data-carousel>
+            <div class="samples-item font-subtitle clr-light outline bg-translucent" id="pi-2" data-carousel>
                 <ul data-pages>
                     <li class="page" data-current="true">
-                        <img src="https://via.placeholder.com/600" alt="">
+                        <img src="../public/concweprt.png" alt="">
                     </li>
                     <li class="page">
-                        <img src="https://via.placeholder.com/700" alt="">
+                        <img src="../public/IMG_3761.jpg" alt="">
                     </li>
                     <li class="page">
-                        <img src="https://via.placeholder.com/800" alt="">
+                        <img src="../public/toma.png" alt="">
                     </li>
                 </ul>
                 <a href="" class="price clr-light">
-                    <div class="font-subtext trigger">pricing</div>
-                </a>
-                <button id="pi2-right" class="btn-right trigger" data-button="next"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
-                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
-                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
-                </svg></button>
-                <button id="pi2-left" class="btn-left trigger" data-button="prev"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
-                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
-                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
-                </svg></button></div>
-            <div class="portfolio-item font-subtitle clr-light" id="pi-3" data-carousel>
-                <ul data-pages>
-                    <li class="page" data-current="true">
-                        <img src="https://via.placeholder.com/600" alt="">
-                    </li>
-                    <li class="page">
-                        <img src="https://via.placeholder.com/700" alt="">
-                    </li>
-                    <li class="page">
-                        <img src="https://via.placeholder.com/800" alt="">
-                    </li>
-                </ul>
-                <a href="" class="price clr-light">
-                    <div class="font-subtext trigger">pricing</div>
-                </a>
-                <a href="" class="price clr-light">
-                    <div class="font-subtext trigger">pricing</div>
-                </a>
-                <button id="pi3-right" class="material-symbols-outlined btn-right trigger" data-button="next"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
-                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
-                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
-                </svg></button></button>
-                <button id="pi3-left" class=" btn-left trigger" data-button="prev"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
-                    <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
-                    <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
-                </svg></button></button></div>
-            <div class="portfolio-item font-subtitle clr-light" id="pi-4" data-carousel>
-                <ul data-pages>
-                    <li class="page" data-current="true">
-                        <img src="https://via.placeholder.com/600" alt="">
-                    </li>
-                    <li class="page">
-                        <img src="https://via.placeholder.com/700" alt="">
-                    </li>
-                    <li class="page">
-                        <img src="https://via.placeholder.com/800" alt="">
-                    </li>
-                </ul>
-                <a href="" class="price clr-light">
-                    <div class="font-subtext trigger">pricing</div>
-                </a>
-                <a href="" class="price clr-light">
-                    <div class="font-subtext trigger">pricing</div>
+                    <div class="font-subtext trigger clr-accent">pricing</div>
                 </a>
                 <button id="pi4-right" class="btn-right trigger" data-button="next"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
@@ -197,48 +132,41 @@
                     <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
                     <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
                 </svg></button></button></div>
-            <div class="portfolio-item font-subtitle clr-light" id="pi-5">
+            <div class="samples-item font-subtitle clr-light" id="pi-3">
                 
                 
                 
                 
                 <a href="" class="price clr-light">
-                    <div class="font-subtext trigger">pricing</div>
+                    <div class="font-subtext trigger clr-accent">pricing</div>
                 </a>
-                <button id="pi5-right" class="btn-right trigger"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button id="pi5-right" class="btn-right trigger none"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
                     <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
                     <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
                 </svg></button></button>
-                <button id="pi5-left" class=" btn-left trigger"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button id="pi5-left" class=" btn-left trigger none"><svg class="btn-svg" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
                     <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
                     <path id="pointer-2" d="M512.224 270L365 525L217.776 270H512.224Z" stroke-width="50" />
                 </svg></button></button>
-                <div class="scroller flex snap-inline" data-scroller>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
-                    <div class=""><img class="scroller-image" src="https://via.placeholder.com/300" alt=""></div>
+                <div class="scroller flex snap-inline bg-translucent outline" data-scroller>
+                    <div class=""><img class="scroller-image" src="../public/yuu2.png" alt=""></div>
+                    <div class=""><img class="scroller-image" src="../public/seoll.png" alt=""></div>
+                    <div class=""><img class="scroller-image" src="../public/lililili2.png" alt=""></div>
+                    <div class=""><img class="scroller-image" src="../public/jackie1.png" alt=""></div>
+                    <div class=""><img class="scroller-image" src="../public/6c3d026c.png" alt=""></div>
+                    <div class=""><img class="scroller-image" src="../public/tinywow_ioioio2_8909444.png" alt=""></div>
                 </div>
             </div>
     </section>
-    <section id="comissions-section">
+    <section id="comissions-section" class="flex">
+        <div class="title-wrapper flex">
+            <div class="dot"></div>
+        <p class="clr-light font-title section-title">Services </p><div class="bar"></div></div>
         <div class="scroll-down flex align-center">
             <p class="font-subtext clr-light">scroll down for more</p>
-            <a href="#">
+            <a href="#terms">
                 <svg class="trigger" viewBox="0 0 730 730" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle id="down-arrow-bg" cx="365" cy="365" r="365" />
                     <path id="pointer-1" d="M512.224 270L365 525L217.776 270L512.224 270Z" stroke-width="50" />
@@ -246,10 +174,9 @@
                 </svg></a>
         </div>
         <div class="wrapper flex clr-light" id="prices-page">
-            <div class="font-title">Services</div>
             <div class="font-subtext">*Payment accepted only through paypal</div>
             <div class="font-subtext">*Payment accepted only in united states dollars (USD$)</div>
-            <div class="service-list outline grid">
+            <div class="service-list outline grid bg-translucent">
                 
                 <dialog id="emote-modal" class="product-screen"><button id="emote-close-button" class="close-button"></button></dialog>
                 <dialog id="chibi-modal" class="product-screen"><button id="chibi-close-button" class="close-button"></button></dialog>
@@ -264,20 +191,20 @@
                 <dialog id="live-2d-chibi-modal" class="product-screen"><button id="live-2d-chibi-close-button" class="close-button"></button></dialog>
 
 
-                <div class="font-subtitle service-label trigger" id="emotes"><div class="material-symbols-outlined">auto_awesome</div> Emotes</div>
-                <div class="font-subtitle service-label trigger" id="chibi"><div class="material-symbols-outlined">auto_awesome</div> Chibi</div>
-                <div class="font-subtitle service-label trigger" id="bust"><div class="material-symbols-outlined">auto_awesome</div> Bust</div>
-                <div class="font-subtitle service-label trigger" id="half-body"><div class="material-symbols-outlined">auto_awesome</div> Half-body</div>
-                <div class="font-subtitle service-label trigger" id="full-body"><div class="material-symbols-outlined">auto_awesome</div> Full-body</div>
-                <div class="font-subtitle service-label trigger" id="live-2d"><div class="material-symbols-outlined">auto_awesome</div> Live2D model</div>
-                <div class="font-subtitle service-label trigger" id="live-2d-chibi"><div class="material-symbols-outlined">auto_awesome</div> Live2D chibi model</div>
-                <div class="font-subtitle service-label trigger" id="schedules"><div class="material-symbols-outlined">auto_awesome</div> Schedules</div>
-                <div class="font-subtitle service-label trigger" id="overlays"><div class="material-symbols-outlined">auto_awesome</div> Overlays</div>
-                <div class="font-subtitle service-label trigger" id="char-design"><div class="material-symbols-outlined">auto_awesome</div> Character design</div>
-                <div class="font-subtitle service-label trigger" id="ref-sheet"><div class="material-symbols-outlined">auto_awesome</div> Reference Sheet</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="emotes"><div class="material-symbols-outlined">auto_awesome</div> Emotes</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="chibi"><div class="material-symbols-outlined">auto_awesome</div> Chibi</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="bust"><div class="material-symbols-outlined">auto_awesome</div> Bust</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="half-body"><div class="material-symbols-outlined">auto_awesome</div> Half-body</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="full-body"><div class="material-symbols-outlined">auto_awesome</div> Full-body</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="live-2d"><div class="material-symbols-outlined">auto_awesome</div> Live2D model</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="live-2d-chibi"><div class="material-symbols-outlined">auto_awesome</div> Live2D chibi model</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="schedules"><div class="material-symbols-outlined">auto_awesome</div> Schedules</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="overlays"><div class="material-symbols-outlined">auto_awesome</div> Overlays</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="char-design"><div class="material-symbols-outlined">auto_awesome</div> Character design</div>
+                <div class="font-subtitle service-label bg-translucent outline trigger" id="ref-sheet"><div class="material-symbols-outlined">auto_awesome</div> Reference Sheet</div>
                
                
-                <div class="font-body text-center-v price-tag" id="price-emotes">$50</div>
+                <!-- <div class="font-body text-center-v price-tag" id="price-emotes">$50</div>
                 <div class="font-body text-center-v price-tag" id="price-bust">$250</div>
                 <div class="font-body text-center-v price-tag" id="price-chibi">$200</div>
                 <div class="font-body text-center-v price-tag" id="price-half-body">$400</div>
@@ -287,14 +214,49 @@
                 <div class="font-body text-center-v price-tag" id="price-schedules">$200</div>
                 <div class="font-body text-center-v price-tag" id="price-overlays">$250</div>
                 <div class="font-body text-center-v price-tag" id="price-char-design">$400</div>
-                <div class="font-body text-center-v price-tag" id="price-ref-sheet">$800</div>
+                <div class="font-body text-center-v price-tag" id="price-ref-sheet">$800</div> -->
 
             </div>
         </div>
     </section>
-    <section>
-        <div class="wrapper"></div>
+    <section id="terms">
+        <div class="bg-board wrapper">
+            <P class="clr-light font-title terms-and-conditions"></P>
+            <ul >
+                <li class="font-subtitle clr-light"><p><b>Delivery Deadlines</b></p>
+                <li class="font-subtext clr-light">Delivery deadline is not determined and will be dependant on my workload.</li>
+                <li class="font-subtext clr-light">A rush job may be requested with an aditional fee (may varry depending on complexity and urgency from $100 or more).</li>
+                </li>
+                <li class="font-subtitle clr-light"><p><b>Payment</b></p>
+                <li class="font-subtext clr-light">Payment is to be made in full before I start with your comission.</li>
+                <li class="font-subtext clr-light">Payment will be accepted only in Paypal [USD$]</li>
+                <li class="font-subtext clr-light">Refund requests will not be accepted.</li>
+                </li>
+                <li class="font-subtitle clr-light"><p><b>Product timeline</b></p>
+                <li class="font-subtext clr-light">Comissions can take from days up to months to be delivered depending how much 
+                    work I have at the moment. I will try to finish it as soon as I can but please
+                    make sure you are comfortable with possible long wait times before comissioning.</li>
+                <li class="font-subtext clr-light">Product updates will be send periodically to make sure the piece is going in accordance
+                    with comissioner request.</li>
+                <li class="font-subtext clr-light">Once the product has been delivered I will not be accepting revision requests.</li>
+                </li>
+                <li class="font-subtitle clr-light"><p><b>Usage and copyright</b></p>
+                <li class="font-subtext clr-light">Comissions are for personal use only.</li>
+                <li class="font-subtext clr-light">I own the rights to my art and may use it in future activities.</li>
+                <li class="font-subtext clr-light">Do not claim, edit, repost, trace or copy my works without my explicit concent.</li>
+                <li class="font-subtext clr-light">An additional fee will be required for comercial use. </li>
+                <li class="font-small clr-light">*Example. For a [220US$] art piece to be used for comercial purposes, a fee of [220US$] will be charged. Totaling [440US$]</li>
+                <li class="font-subtext clr-light">I do not, under any circumstances provide concent for my art to be used in any senario concerning Non-Fungible Token (NFT)s or Artificial intelegence (AI) art.</li>
+                </li>
+            </ul>
+        
+        </div>
     </section>
+    <footer class="bg-translucent">
+        <p class="clr-light">website designed and developed by <a href="https://twitter.com/carrot_average">@AverageCarrot</a></p>
+        <p class="clr-light">special thanks to <a href="https://twitter.com/Chrysalia_Vt">@Chrysalia</a> for design help</p>
+        <p class="clr-light">website built and designed for <a href="https://twitter.com/RIHSURI">@Rihsuri</a></p>
+    </footer>
 </body>
 
 </html>

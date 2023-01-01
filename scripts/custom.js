@@ -2,7 +2,7 @@ if (window.innerWidth > 1080) {
   particlesJS("blue-dots", {
     "particles": {
       "number": {
-        "value": 12,
+        "value": 5,
         "density": {
           "enable": true,
           "value_area": 800
@@ -37,12 +37,12 @@ if (window.innerWidth > 1080) {
         }
       },
       "size": {
-        "value": 90,
+        "value": 200,
         "random": true,
         "anim": {
           "enable": true,
           "speed": 10,
-          "size_min": 40,
+          "size_min": 100,
           "sync": false
         }
       },

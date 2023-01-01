@@ -8,17 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap"rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/mouse-effects.css">
-    <script src="node_modules/particles.js/particles.js" defer></script>
-    <script src="scripts/custom-particles.js" defer></script>
-    <script src="scripts/index.js" defer></script>
-    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/mouse-effects.css">
+    <link rel="stylesheet" href="../styles/mouse-navigation.css">
+    <script src="../node_modules/particles.js/particles.js" defer></script>
+    <script src="../scripts/custom-particles.js" defer></script>
+    <script src="../scripts/index.js" defer></script>
+    <script src="../scripts/main.js" defer></script>
     <title>Riri-website-main-menu</title>
 </head>
 
 <body class="flex align-center justify-center bg-board">
     <div id="particles-js"></div>
+    <div id="context-menu">
+        <div class="navigation-item"><a class="fill-div clr-accent" href="https://www.twitch.tv/rihsuri" target="_blank">Twitch</a></div>
+        <div class="navigation-item"><a class="fill-div clr-accent" href="../pages/comissions.html#portfolio-section" target="_blank">Portfolio</a></div>
+        <div class="navigation-item"><a class="fill-div clr-accent" href="../pages/contact.html">Contact</a></div>
+        <div class="navigation-item"><a class="fill-div clr-accent" href="../pages/comissions.html#comissions-section">Comissions</a></div>
+        <div class="navigation-item"><a href="../pages/comissions.html#terms" class="fill-div clr-accent">Terms of service</a></div>
+    </div>
     <div class="mouse mouse-hover"><svg id="mouse-svg" viewBox="0 0 730 730" fill="none"><path id="mouse-triangle" d="M217.777 450L365.001 195L512.225 450H217.777Z" stroke-width="24" /></svg></div>
     <div class="wrapper bg-board flex justify-center align-center">
         <button class="trigger" id="nav-menu">
@@ -62,16 +70,13 @@
             </svg>
         </button>
         <section id="button-animation" class="nav-buttons flex align-center">
-            <a class="link-standard" href="https://www.twitch.tv/rihsuri" target="_blank"
-                rel="noopener noreferrer"><button id="nav-btn-1" class="btn-standard font-subtitle trigger">Twitch</button></a>
-            <a class="link-standard" href="pages/portfolio.html#portfolio-section"><button id="nav-btn-2"
-                    class="btn-standard font-subtitle trigger">Portfolio</button></a>
-            <a class="link-standard" href="pages/contact.html"><button id="nav-btn-3"
-                    class="btn-standard font-subtitle trigger">Contact</button></a>
-            <a class="link-standard" href="pages/portfolio.html#comissions-section"><button id="nav-btn-4"
-                    class="btn-standard font-subtitle trigger">Comissions</button></a>
-            <a class="link-standard" href="pages/terms.html"><button id="nav-btn-5"
-                    class="btn-standard font-subtitle trigger"></button></a>
+            <a class="link-standard trigger" id="nav-link-1" href="https://www.twitch.tv/rihsuri" target="_blank"
+                rel="noopener noreferrer"><button id="nav-btn-1" class="btn-standard font-subtitle">Twitch</button></a>
+            <a class="link-standard trigger" id="nav-link-2" href="../pages/comissions.html#portfolio-section"><button id="nav-btn-2" class="btn-standard font-subtitle">Portfolio</button></a>
+            <a class="link-standard trigger" id="nav-link-3" href="../pages/contact.html"><button id="nav-btn-3"
+                    class="btn-standard font-subtitle">Contact</button></a>
+            <a class="link-standard trigger" id="nav-link-4" href="../pages/comissions.html#comissions-section"><button id="nav-btn-4" class="btn-standard font-subtitle">Comissions</button></a>
+            <a class="link-standard trigger" id="nav-link-5" href="../pages/comissions.html#terms"><button id="nav-btn-5" class="btn-standard font-subtitle"></button></a>
 
         </section>
     </div>

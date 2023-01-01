@@ -1,46 +1,3 @@
-/* developed by EcXscariot/yourOrdinaryCarrot */
-/* last modified 11/23/2022 */
-
-
-mouseGlow();
-
-// cursor trace function
-const mouse = document.querySelector(".mouse");
-const triangle = document.getElementById("mouse-triangle");
-
-function mouseMove(e, acctivated) {
-    const x = e.clientX - mouse.offsetWidth / 2,
-          y = e.clientY - mouse.offsetHeight / 2;
-
-    const keyframes = {
-        transform: `translate(${x}px, ${y}px)`
-    }
-    mouse.animate(keyframes, {
-        duration: 1000,
-        fill: "forwards"
-    });
-
-    mouse.classList.add("mouse-hover");
-    mouse.classList.remove("acctivate");
-    triangle.classList.remove("mouse-triangle-invisible");
-
-}
-
-function mouseGlow() {
-window.onmousemove = e => {
-    const possible = e.target.closest(".trigger"),
-          acctivated = possible !== null;    
-          
-          mouseMove(e, acctivated);
-          if (acctivated) {
-            mouse.classList.remove("mouse-hover");
-            mouse.classList.add("acctivate");
-            triangle.classList.add("mouse-triangle-invisible");
-        }
-     
-}
-}
-
 
 //right click menu function
 
@@ -68,24 +25,24 @@ events.forEach((eventType) => {
       let height = window.innerHeight;
       //If user clicks/touches near right corner
       if (width - mouseX <= 200) {
-        contextMenu.style.borderRadius = "1rem";
+        contextMenu.style.borderRadius = "5px 0 5px 5px";
         contextMenu.style.left = width - menuWidth + "px";
         contextMenu.style.top = mouseY + "px";
         //right bottom
         if (height - mouseY <= 200) {
           contextMenu.style.top = mouseY - menuHeight + "px";
-          contextMenu.style.borderRadius = "1rem";
+          contextMenu.style.borderRadius = "5px 5px 0 5px";
         }
       }
       //left
       else {
-        contextMenu.style.borderRadius = "1rem";
+        contextMenu.style.borderRadius = "0 5px 5px 5px";
         contextMenu.style.left = mouseX + "px";
         contextMenu.style.top = mouseY + "px";
         //left bottom
         if (height - mouseY <= 200) {
           contextMenu.style.top = mouseY - menuHeight + "px";
-          contextMenu.style.borderRadius = "1rem";
+          contextMenu.style.borderRadius = "5px 5px 5px 0";
         }
       }
       //display the menu
@@ -105,10 +62,9 @@ document.addEventListener("touchend", function (e) {
   //if user taps twice in 500ms
   if (tapLength < 500 && tapLength > 0) {
     //hide menu
-    contextMenu.style.visibility = "visible";
+    contextMenu.style.visibility = "hidden";
     e.preventDefault();
   } else {
-    contextMenu.style.visibility = "hidden";
     //timeout if user doesn't tap after 500ms
     timeout = setTimeout(function () {
       clearTimeout(timeout);
